@@ -1,0 +1,2440 @@
+{
+  "D01": {
+    "name": "Member & eligibility",
+    "priority": "Must",
+    "records": [
+      {
+        "member_id": "BW-10001",
+        "persona": "P1",
+        "first_name": "Harold",
+        "last_name": "Brennan",
+        "dob": "1948-03-14",
+        "sex": "M",
+        "plan_product": "MA-HMO",
+        "dual_status": "Not dual",
+        "medicaid_id": "",
+        "preferred_language": "English",
+        "interpreter_needed": "N",
+        "address": "14 Elmwood Ct",
+        "city": "Columbus",
+        "state": "OH",
+        "zip": "43214",
+        "pcp_npi": "9900000142",
+        "program": "TOC + DM-HF",
+        "enroll_start": "2019-01-01",
+        "record_updated": "2026-01-04"
+      },
+      {
+        "member_id": "BW-10002",
+        "persona": "P2",
+        "first_name": "Devon",
+        "last_name": "Mitchell",
+        "dob": "1959-05-02",
+        "sex": "M",
+        "plan_product": "MA-HMO",
+        "dual_status": "Not dual",
+        "medicaid_id": "",
+        "preferred_language": "English",
+        "interpreter_needed": "N",
+        "address": "3301 Maple Ridge Dr",
+        "city": "Columbus",
+        "state": "OH",
+        "zip": "43224",
+        "pcp_npi": "9900000145",
+        "program": "DM-Diabetes",
+        "enroll_start": "2024-06-01",
+        "record_updated": "2026-06-01"
+      },
+      {
+        "member_id": "BW-10003",
+        "persona": "P3",
+        "first_name": "Marcus",
+        "last_name": "Reid",
+        "dob": "1972-01-19",
+        "sex": "M",
+        "plan_product": "D-SNP",
+        "dual_status": "Full dual (disability)",
+        "medicaid_id": "MCD-77120458",
+        "preferred_language": "English",
+        "interpreter_needed": "N",
+        "address": "902 E Livingston Ave, Rm 4",
+        "city": "Columbus",
+        "state": "OH",
+        "zip": "43205",
+        "pcp_npi": "9900000170",
+        "program": "CCM",
+        "enroll_start": "2022-03-01",
+        "record_updated": "2025-11-20"
+      },
+      {
+        "member_id": "BW-10004",
+        "persona": "P4",
+        "first_name": "Leah",
+        "last_name": "Carter",
+        "dob": "1992-07-08",
+        "sex": "F",
+        "plan_product": "D-SNP",
+        "dual_status": "Full dual (disability)",
+        "medicaid_id": "MCD-80233719",
+        "preferred_language": "English",
+        "interpreter_needed": "N",
+        "address": "14 Linden Ave, Apt 3",
+        "city": "Columbus",
+        "state": "OH",
+        "zip": "43211",
+        "pcp_npi": "9900000160",
+        "program": "CCM + BH coordination",
+        "enroll_start": "2023-09-01",
+        "record_updated": "2025-09-15",
+        "_flags": {
+          "address": "IMP-17"
+        }
+      },
+      {
+        "member_id": "BW-10005",
+        "persona": "P5",
+        "first_name": "Esperanza",
+        "last_name": "Ruiz",
+        "dob": "1944-06-11",
+        "sex": "F",
+        "plan_product": "D-SNP",
+        "dual_status": "Full dual",
+        "medicaid_id": "MCD-61092347",
+        "preferred_language": "English",
+        "interpreter_needed": "N",
+        "address": "1770 Parsons Ave",
+        "city": "Columbus",
+        "state": "OH",
+        "zip": "43207",
+        "pcp_npi": "9900000178",
+        "program": "CCM",
+        "enroll_start": "2021-01-01",
+        "record_updated": "2021-01-01",
+        "_flags": {
+          "preferred_language": "IMP-21",
+          "interpreter_needed": "IMP-21"
+        }
+      }
+    ]
+  },
+  "D02": {
+    "name": "Contact points",
+    "priority": "Must",
+    "records": [
+      {
+        "contact_id": "C-1001",
+        "member_id": "BW-10001",
+        "value": "614-555-0101",
+        "line_type": "home",
+        "owner": "member",
+        "owner_name": "Harold Brennan",
+        "source": "Enrollment file",
+        "last_verified": "2019-06-03",
+        "consent_to_call": "Y",
+        "sms_opt_in": "N",
+        "status": "failed",
+        "_flags": {
+          "status": "IMP-06",
+          "last_verified": "IMP-06"
+        }
+      },
+      {
+        "contact_id": "C-1002",
+        "member_id": "BW-10001",
+        "value": "614-555-0133",
+        "line_type": "mobile",
+        "owner": "caregiver",
+        "owner_name": "Karen Brennan (daughter)",
+        "source": "HIE ADT next-of-kin + case notes",
+        "last_verified": "2026-10-20",
+        "consent_to_call": "Y",
+        "sms_opt_in": "Y",
+        "status": "active"
+      },
+      {
+        "contact_id": "C-2001",
+        "member_id": "BW-10002",
+        "value": "614-555-0111",
+        "line_type": "mobile",
+        "owner": "member",
+        "owner_name": "Devon Mitchell",
+        "source": "Outbound call",
+        "last_verified": "2026-09-29",
+        "consent_to_call": "Y",
+        "sms_opt_in": "Y",
+        "status": "active"
+      },
+      {
+        "contact_id": "C-2002",
+        "member_id": "BW-10002",
+        "value": "614-555-0112",
+        "line_type": "home",
+        "owner": "member",
+        "owner_name": "Devon Mitchell",
+        "source": "Enrollment file",
+        "last_verified": "2021-03-02",
+        "consent_to_call": "Y",
+        "sms_opt_in": "N",
+        "status": "unknown"
+      },
+      {
+        "contact_id": "C-3001",
+        "member_id": "BW-10003",
+        "value": "614-555-0150",
+        "line_type": "home",
+        "owner": "member",
+        "owner_name": "Marcus Reid",
+        "source": "Enrollment file",
+        "last_verified": "2023-02-11",
+        "consent_to_call": "Y",
+        "sms_opt_in": "N",
+        "status": "unknown",
+        "_flags": {
+          "owner": "IMP-10",
+          "owner_name": "IMP-10"
+        }
+      },
+      {
+        "contact_id": "C-3002",
+        "member_id": "BW-10003",
+        "value": "614-555-0158",
+        "line_type": "mobile",
+        "owner": "member",
+        "owner_name": "Marcus Reid",
+        "source": "Outbound call",
+        "last_verified": "2026-07-22",
+        "consent_to_call": "Y",
+        "sms_opt_in": "Y",
+        "status": "failed"
+      },
+      {
+        "contact_id": "C-3004",
+        "member_id": "BW-10003",
+        "value": "614-555-0164",
+        "line_type": "mobile",
+        "owner": "other",
+        "owner_name": "Denise Reid (sister)",
+        "source": "ED registration next-of-kin (ADT NK1)",
+        "last_verified": "2026-11-07",
+        "consent_to_call": "N",
+        "sms_opt_in": "N",
+        "status": "active"
+      },
+      {
+        "contact_id": "C-4001",
+        "member_id": "BW-10004",
+        "value": "614-555-0122",
+        "line_type": "mobile (prepaid)",
+        "owner": "member",
+        "owner_name": "Leah Carter",
+        "source": "Outbound SMS reply",
+        "last_verified": "2026-10-28",
+        "consent_to_call": "Y",
+        "sms_opt_in": "Y",
+        "status": "active"
+      },
+      {
+        "contact_id": "C-4002",
+        "member_id": "BW-10004",
+        "value": "614-555-0125",
+        "line_type": "work",
+        "owner": "other",
+        "owner_name": "Harbor Light Shelter - case worker desk",
+        "source": "Discharge summary social work note",
+        "last_verified": "2026-11-05",
+        "consent_to_call": "Y",
+        "sms_opt_in": "N",
+        "status": "unknown"
+      },
+      {
+        "contact_id": "C-5001",
+        "member_id": "BW-10005",
+        "value": "614-555-0190",
+        "line_type": "home",
+        "owner": "member",
+        "owner_name": "Esperanza Ruiz",
+        "source": "Enrollment file",
+        "last_verified": "2026-10-15",
+        "consent_to_call": "Y",
+        "sms_opt_in": "N",
+        "status": "active"
+      },
+      {
+        "contact_id": "C-5002",
+        "member_id": "BW-10005",
+        "value": "614-555-0191",
+        "line_type": "mobile",
+        "owner": "caregiver",
+        "owner_name": "Lucia Ruiz (daughter)",
+        "source": "Caregiver form",
+        "last_verified": "2026-10-15",
+        "consent_to_call": "Y",
+        "sms_opt_in": "Y",
+        "status": "active"
+      }
+    ]
+  },
+  "D03": {
+    "name": "Outreach & contact history",
+    "priority": "Must",
+    "records": [
+      {
+        "attempt_id": "OA-1001",
+        "member_id": "BW-10001",
+        "contact_id": "C-1001",
+        "datetime": "2026-08-18 10:05",
+        "channel": "phone",
+        "outcome": "connected",
+        "duration_min": 14,
+        "language_used": "English",
+        "staff_id": "RN-MARIA",
+        "note": "Monthly HF check-in"
+      },
+      {
+        "attempt_id": "OA-1002",
+        "member_id": "BW-10001",
+        "contact_id": "C-1002",
+        "datetime": "2026-09-14 12:20",
+        "channel": "phone",
+        "outcome": "connected",
+        "duration_min": 16,
+        "language_used": "English",
+        "staff_id": "RN-MARIA",
+        "note": "Spoke with Karen re: weights"
+      },
+      {
+        "attempt_id": "OA-1003",
+        "member_id": "BW-10001",
+        "contact_id": "C-1002",
+        "datetime": "2026-10-20 12:35",
+        "channel": "phone",
+        "outcome": "connected",
+        "duration_min": 18,
+        "language_used": "English",
+        "staff_id": "RN-MARIA",
+        "note": "Pre-admission check-in; mild ankle swelling reported"
+      },
+      {
+        "attempt_id": "OA-1004",
+        "member_id": "BW-10001",
+        "contact_id": "C-1001",
+        "datetime": "2026-11-07 11:02",
+        "channel": "phone",
+        "outcome": "disconnected",
+        "duration_min": 0,
+        "language_used": "",
+        "staff_id": "RN-WKND",
+        "note": "Weekend TOC attempt",
+        "_flags": {
+          "outcome": "IMP-06"
+        }
+      },
+      {
+        "attempt_id": "OA-1005",
+        "member_id": "BW-10001",
+        "contact_id": "C-1001",
+        "datetime": "2026-11-07 15:30",
+        "channel": "phone",
+        "outcome": "disconnected",
+        "duration_min": 0,
+        "language_used": "",
+        "staff_id": "RN-WKND",
+        "note": "Weekend TOC attempt",
+        "_flags": {
+          "outcome": "IMP-06"
+        }
+      },
+      {
+        "attempt_id": "OA-2001",
+        "member_id": "BW-10002",
+        "contact_id": "C-2001",
+        "datetime": "2026-08-25 08:40",
+        "channel": "phone",
+        "outcome": "connected",
+        "duration_min": 11,
+        "language_used": "English",
+        "staff_id": "RN-MARIA",
+        "note": "DM check-in"
+      },
+      {
+        "attempt_id": "OA-2002",
+        "member_id": "BW-10002",
+        "contact_id": "C-2001",
+        "datetime": "2026-09-29 08:20",
+        "channel": "phone",
+        "outcome": "connected",
+        "duration_min": 12,
+        "language_used": "English",
+        "staff_id": "RN-MARIA",
+        "note": "Mentioned stomach upset on metformin"
+      },
+      {
+        "attempt_id": "OA-2003",
+        "member_id": "BW-10002",
+        "contact_id": "C-2001",
+        "datetime": "2026-10-27 14:00",
+        "channel": "phone",
+        "outcome": "voicemail",
+        "duration_min": 1,
+        "language_used": "",
+        "staff_id": "RN-MARIA",
+        "note": ""
+      },
+      {
+        "attempt_id": "OA-2004",
+        "member_id": "BW-10002",
+        "contact_id": "C-2002",
+        "datetime": "2026-11-03 15:10",
+        "channel": "phone",
+        "outcome": "no answer",
+        "duration_min": 0,
+        "language_used": "",
+        "staff_id": "RN-MARIA",
+        "note": ""
+      },
+      {
+        "attempt_id": "OA-3001",
+        "member_id": "BW-10003",
+        "contact_id": "C-3002",
+        "datetime": "2026-07-22 18:40",
+        "channel": "phone",
+        "outcome": "connected",
+        "duration_min": 9,
+        "language_used": "English",
+        "staff_id": "RN-MARIA",
+        "note": "Last successful contact"
+      },
+      {
+        "attempt_id": "OA-3002",
+        "member_id": "BW-10003",
+        "contact_id": "C-3001",
+        "datetime": "2026-10-16 10:10",
+        "channel": "phone",
+        "outcome": "wrong person",
+        "duration_min": 1,
+        "language_used": "English",
+        "staff_id": "RN-MARIA",
+        "note": "Man answered, said Marcus moved out",
+        "_flags": {
+          "outcome": "IMP-10"
+        }
+      },
+      {
+        "attempt_id": "OA-3003",
+        "member_id": "BW-10003",
+        "contact_id": "C-3002",
+        "datetime": "2026-10-22 11:15",
+        "channel": "phone",
+        "outcome": "disconnected",
+        "duration_min": 0,
+        "language_used": "",
+        "staff_id": "RN-MARIA",
+        "note": ""
+      },
+      {
+        "attempt_id": "OA-3004",
+        "member_id": "BW-10003",
+        "contact_id": "C-3001",
+        "datetime": "2026-10-27 10:30",
+        "channel": "phone",
+        "outcome": "wrong person",
+        "duration_min": 1,
+        "language_used": "English",
+        "staff_id": "RN-MARIA",
+        "note": "Same man; hung up",
+        "_flags": {
+          "outcome": "IMP-10"
+        }
+      },
+      {
+        "attempt_id": "OA-3005",
+        "member_id": "BW-10003",
+        "contact_id": "C-3002",
+        "datetime": "2026-10-30 11:20",
+        "channel": "phone",
+        "outcome": "disconnected",
+        "duration_min": 0,
+        "language_used": "",
+        "staff_id": "RN-MARIA",
+        "note": ""
+      },
+      {
+        "attempt_id": "OA-3006",
+        "member_id": "BW-10003",
+        "contact_id": "C-3001",
+        "datetime": "2026-11-05 10:45",
+        "channel": "phone",
+        "outcome": "wrong person",
+        "duration_min": 1,
+        "language_used": "English",
+        "staff_id": "RN-MARIA",
+        "note": "3rd attempt; UTR letter queued",
+        "_flags": {
+          "outcome": "IMP-10"
+        }
+      },
+      {
+        "attempt_id": "OA-3007",
+        "member_id": "BW-10003",
+        "contact_id": "",
+        "datetime": "2026-11-05 16:00",
+        "channel": "letter",
+        "outcome": "sent",
+        "duration_min": 0,
+        "language_used": "English",
+        "staff_id": "SYSTEM",
+        "note": "Unable-to-reach letter; case auto-closes 12 Nov"
+      },
+      {
+        "attempt_id": "OA-4001",
+        "member_id": "BW-10004",
+        "contact_id": "C-4001",
+        "datetime": "2026-10-14 18:20",
+        "channel": "SMS",
+        "outcome": "replied",
+        "duration_min": 0,
+        "language_used": "English",
+        "staff_id": "SW-JAMAL",
+        "note": "Confirmed therapy appt by text"
+      },
+      {
+        "attempt_id": "OA-4002",
+        "member_id": "BW-10004",
+        "contact_id": "C-4001",
+        "datetime": "2026-10-28 19:05",
+        "channel": "SMS",
+        "outcome": "replied",
+        "duration_min": 0,
+        "language_used": "English",
+        "staff_id": "RN-MARIA",
+        "note": "Replied: 'please text, don't call'"
+      },
+      {
+        "attempt_id": "OA-4003",
+        "member_id": "BW-10004",
+        "contact_id": "C-4001",
+        "datetime": "2026-11-06 11:00",
+        "channel": "phone",
+        "outcome": "no answer",
+        "duration_min": 0,
+        "language_used": "",
+        "staff_id": "RN-TOC",
+        "note": "TOC call after discharge"
+      },
+      {
+        "attempt_id": "OA-4004",
+        "member_id": "BW-10004",
+        "contact_id": "C-4001",
+        "datetime": "2026-11-06 15:00",
+        "channel": "phone",
+        "outcome": "no answer",
+        "duration_min": 0,
+        "language_used": "",
+        "staff_id": "RN-TOC",
+        "note": "TOC call after discharge"
+      },
+      {
+        "attempt_id": "OA-5001",
+        "member_id": "BW-10005",
+        "contact_id": "C-5002",
+        "datetime": "2026-09-10 19:40",
+        "channel": "phone",
+        "outcome": "connected",
+        "duration_min": 28,
+        "language_used": "Spanish (interpreter)",
+        "staff_id": "RN-MARIA",
+        "note": "Spoke with Lucia",
+        "_flags": {
+          "language_used": "IMP-21"
+        }
+      },
+      {
+        "attempt_id": "OA-5002",
+        "member_id": "BW-10005",
+        "contact_id": "C-5002",
+        "datetime": "2026-10-15 19:20",
+        "channel": "phone",
+        "outcome": "connected",
+        "duration_min": 34,
+        "language_used": "Spanish (interpreter)",
+        "staff_id": "RN-MARIA",
+        "note": "Lucia exhausted; Zarit-4 = 12",
+        "_flags": {
+          "language_used": "IMP-21"
+        }
+      },
+      {
+        "attempt_id": "OA-5003",
+        "member_id": "BW-10005",
+        "contact_id": "C-5001",
+        "datetime": "2026-11-02 11:00",
+        "channel": "phone",
+        "outcome": "no answer",
+        "duration_min": 0,
+        "language_used": "",
+        "staff_id": "RN-MARIA",
+        "note": "Called in English, daytime"
+      }
+    ]
+  },
+  "D04": {
+    "name": "ADT alerts",
+    "priority": "Must",
+    "records": [
+      {
+        "adt_id": "ADT-1001",
+        "member_id": "BW-10001",
+        "facility": "St. Brigid Medical Center",
+        "event": "A01 Admit",
+        "event_datetime": "2026-11-03 21:05",
+        "received_datetime": "2026-11-03 21:07",
+        "patient_class": "Inpatient",
+        "dx_text": "",
+        "attending": "Dr. R. Okonjo (Cardiology)",
+        "discharge_disposition": "",
+        "_flags": {
+          "dx_text": "IMP-04"
+        }
+      },
+      {
+        "adt_id": "ADT-1002",
+        "member_id": "BW-10001",
+        "facility": "St. Brigid Medical Center",
+        "event": "A03 Discharge",
+        "event_datetime": "2026-11-06 14:10",
+        "received_datetime": "2026-11-07 09:15",
+        "patient_class": "Inpatient",
+        "dx_text": "CHF exacerbation",
+        "attending": "Dr. R. Okonjo (Cardiology)",
+        "discharge_disposition": "Home, self-care",
+        "_flags": {
+          "received_datetime": "IMP-05"
+        }
+      },
+      {
+        "adt_id": "ADT-1003",
+        "member_id": "BW-10001",
+        "facility": "St. Brigid Medical Center",
+        "event": "A03 Discharge",
+        "event_datetime": "2026-11-06 14:10",
+        "received_datetime": "2026-11-07 09:16",
+        "patient_class": "Inpatient",
+        "dx_text": "CHF exacerbation",
+        "attending": "Dr. R. Okonjo (Cardiology)",
+        "discharge_disposition": "Home, self-care",
+        "_flags": {
+          "adt_id": "IMP-07"
+        }
+      },
+      {
+        "adt_id": "ADT-3001",
+        "member_id": "BW-10003",
+        "facility": "Eastside General Hospital",
+        "event": "A04 ED registration",
+        "event_datetime": "2026-10-19 21:55",
+        "received_datetime": "2026-10-19 21:58",
+        "patient_class": "Emergency",
+        "dx_text": "Shortness of breath",
+        "attending": "ED physician",
+        "discharge_disposition": ""
+      },
+      {
+        "adt_id": "ADT-3002",
+        "member_id": "BW-10003",
+        "facility": "Eastside General Hospital",
+        "event": "A03 ED discharge",
+        "event_datetime": "2026-10-20 02:30",
+        "received_datetime": "2026-10-20 02:31",
+        "patient_class": "Emergency",
+        "dx_text": "Asthma exacerbation",
+        "attending": "ED physician",
+        "discharge_disposition": "Home"
+      },
+      {
+        "adt_id": "ADT-3003",
+        "member_id": "BW-10003",
+        "facility": "Eastside General Hospital",
+        "event": "A04 ED registration",
+        "event_datetime": "2026-11-07 22:40",
+        "received_datetime": "2026-11-07 22:44",
+        "patient_class": "Emergency",
+        "dx_text": "",
+        "attending": "ED physician",
+        "discharge_disposition": "",
+        "_flags": {
+          "dx_text": "IMP-12"
+        }
+      },
+      {
+        "adt_id": "ADT-3004",
+        "member_id": "BW-10003",
+        "facility": "Eastside General Hospital",
+        "event": "A03 ED discharge",
+        "event_datetime": "2026-11-08 03:10",
+        "received_datetime": "2026-11-08 03:12",
+        "patient_class": "Emergency",
+        "dx_text": "",
+        "attending": "ED physician",
+        "discharge_disposition": "",
+        "_flags": {
+          "dx_text": "IMP-12",
+          "discharge_disposition": "IMP-12"
+        }
+      },
+      {
+        "adt_id": "ADT-4001",
+        "member_id": "BW-10004",
+        "facility": "Riverside Behavioral Health",
+        "event": "A01 Admit",
+        "event_datetime": "2026-10-30 16:20",
+        "received_datetime": "2026-10-30 16:25",
+        "patient_class": "Inpatient psych",
+        "dx_text": "",
+        "attending": "Dr. P. Anand (Psychiatry)",
+        "discharge_disposition": ""
+      },
+      {
+        "adt_id": "ADT-4002",
+        "member_id": "BW-10004",
+        "facility": "Riverside Behavioral Health",
+        "event": "A03 Discharge",
+        "event_datetime": "2026-11-05 11:00",
+        "received_datetime": "2026-11-05 11:04",
+        "patient_class": "Inpatient psych",
+        "dx_text": "Bipolar disorder",
+        "attending": "Dr. P. Anand (Psychiatry)",
+        "discharge_disposition": "Shelter - Harbor Light Shelter, 220 Pier St, Columbus OH 43215"
+      },
+      {
+        "adt_id": "ADT-5001",
+        "member_id": "BW-10005",
+        "facility": "Mercy West Hospital",
+        "event": "A04 ED registration",
+        "event_datetime": "2026-10-24 10:15",
+        "received_datetime": "2026-10-24 10:20",
+        "patient_class": "Emergency",
+        "dx_text": "Fall at home",
+        "attending": "ED physician",
+        "discharge_disposition": ""
+      },
+      {
+        "adt_id": "ADT-5002",
+        "member_id": "BW-10005",
+        "facility": "Mercy West Hospital",
+        "event": "A03 ED discharge",
+        "event_datetime": "2026-10-24 16:40",
+        "received_datetime": "2026-10-24 16:44",
+        "patient_class": "Emergency",
+        "dx_text": "Knee contusion",
+        "attending": "ED physician",
+        "discharge_disposition": "Home with family"
+      }
+    ]
+  },
+  "D05": {
+    "name": "HIE clinical documents",
+    "priority": "Must",
+    "records": [
+      {
+        "doc_id": "DOC-1001",
+        "member_id": "BW-10001",
+        "facility": "St. Brigid Medical Center",
+        "doc_type": "Discharge summary",
+        "admit_date": "2026-11-03",
+        "discharge_date": "2026-11-06",
+        "primary_dx": "I50.23 Acute on chronic systolic (congestive) heart failure",
+        "secondary_dx": "E11.22 Type 2 diabetes with diabetic CKD; N18.31 CKD stage 3a",
+        "follow_up_instructions": "PCP within 7 days; Cardiology 20 Nov; daily weights, call if +1 kg/day or +2 kg/week; BMP in 1 week; 2 g sodium diet",
+        "received_datetime": "2026-11-07 11:40",
+        "format": "PDF (extracted by MCheck Clinical)"
+      },
+      {
+        "doc_id": "DOC-3001",
+        "member_id": "BW-10003",
+        "facility": "Eastside General Hospital",
+        "doc_type": "ED visit note",
+        "admit_date": "2026-10-19",
+        "discharge_date": "2026-10-20",
+        "primary_dx": "J45.901 Unspecified asthma with (acute) exacerbation",
+        "secondary_dx": "E11.9 Type 2 diabetes",
+        "follow_up_instructions": "Resume controller inhaler; PCP within 1 week",
+        "received_datetime": "2026-10-21 08:10",
+        "format": "CCD"
+      },
+      {
+        "doc_id": "DOC-4001",
+        "member_id": "BW-10004",
+        "facility": "Riverside Behavioral Health",
+        "doc_type": "Discharge summary",
+        "admit_date": "2026-10-30",
+        "discharge_date": "2026-11-05",
+        "primary_dx": "F31.2 Bipolar disorder, current episode manic, severe, with psychotic features",
+        "secondary_dx": "I10 Essential hypertension; Z59.01 Sheltered homelessness",
+        "follow_up_instructions": "Outpatient psychiatry within 7 days; 7-day bridge supply given; social work: housing referral",
+        "received_datetime": "2026-11-05 16:00",
+        "format": "CCD"
+      },
+      {
+        "doc_id": "DOC-4002",
+        "member_id": "BW-10004",
+        "facility": "Riverside Behavioral Health",
+        "doc_type": "Discharge summary (amended)",
+        "admit_date": "2026-10-30",
+        "discharge_date": "2026-11-06",
+        "primary_dx": "F31.2 Bipolar disorder, current episode manic, severe, with psychotic features",
+        "secondary_dx": "I10 Essential hypertension; Z59.01 Sheltered homelessness",
+        "follow_up_instructions": "Outpatient psychiatry within 7 days; 7-day bridge supply given; social work: housing referral",
+        "received_datetime": "2026-11-06 09:30",
+        "format": "CCD",
+        "_flags": {
+          "discharge_date": "IMP-18",
+          "doc_id": "IMP-18"
+        }
+      },
+      {
+        "doc_id": "DOC-5001",
+        "member_id": "BW-10005",
+        "facility": "Mercy West Hospital",
+        "doc_type": "ED visit note",
+        "admit_date": "2026-10-24",
+        "discharge_date": "2026-10-24",
+        "primary_dx": "W19.XXXA Unspecified fall, initial encounter; S80.01XA Contusion of right knee",
+        "secondary_dx": "G30.1 Alzheimer's disease with late onset; E11.22; N18.4 CKD stage 4",
+        "follow_up_instructions": "PCP in 1-2 weeks; home PT evaluation; hospital bed recommended for safe transfers",
+        "received_datetime": "2026-10-25 07:30",
+        "format": "CCD"
+      }
+    ]
+  },
+  "D05b": {
+    "name": "Discharge medication lines (from D05)",
+    "priority": "Must",
+    "records": [
+      {
+        "doc_id": "DOC-1001",
+        "member_id": "BW-10001",
+        "drug": "Sacubitril/valsartan (Entresto)",
+        "dose": "24/26 mg",
+        "frequency": "BID",
+        "action": "NEW",
+        "note": "Start 36 h after last lisinopril dose"
+      },
+      {
+        "doc_id": "DOC-1001",
+        "member_id": "BW-10001",
+        "drug": "Lisinopril",
+        "dose": "20 mg",
+        "frequency": "daily",
+        "action": "STOP",
+        "note": "Replaced by sacubitril/valsartan"
+      },
+      {
+        "doc_id": "DOC-1001",
+        "member_id": "BW-10001",
+        "drug": "Furosemide",
+        "dose": "40 mg",
+        "frequency": "BID",
+        "action": "CHANGE",
+        "note": "Was 40 mg daily"
+      },
+      {
+        "doc_id": "DOC-1001",
+        "member_id": "BW-10001",
+        "drug": "Metoprolol succinate",
+        "dose": "50 mg",
+        "frequency": "daily",
+        "action": "CONTINUE",
+        "note": ""
+      },
+      {
+        "doc_id": "DOC-1001",
+        "member_id": "BW-10001",
+        "drug": "Metformin",
+        "dose": "500 mg",
+        "frequency": "BID",
+        "action": "CONTINUE",
+        "note": ""
+      },
+      {
+        "doc_id": "DOC-1001",
+        "member_id": "BW-10001",
+        "drug": "Atorvastatin",
+        "dose": "40 mg",
+        "frequency": "nightly",
+        "action": "CONTINUE",
+        "note": ""
+      },
+      {
+        "doc_id": "DOC-4001",
+        "member_id": "BW-10004",
+        "drug": "Aripiprazole",
+        "dose": "10 mg",
+        "frequency": "daily",
+        "action": "NEW",
+        "note": "7-day bridge supply dispensed at discharge"
+      },
+      {
+        "doc_id": "DOC-4001",
+        "member_id": "BW-10004",
+        "drug": "Amlodipine",
+        "dose": "5 mg",
+        "frequency": "daily",
+        "action": "CONTINUE",
+        "note": ""
+      }
+    ]
+  },
+  "D06": {
+    "name": "Medical claims",
+    "priority": "Must",
+    "records": [
+      {
+        "claim_id": "CL-1001",
+        "member_id": "BW-10001",
+        "service_date": "2026-08-11",
+        "paid_date": "2026-08-30",
+        "claim_type": "OP lab",
+        "provider_npi": "9900000142",
+        "place_of_service": "11 Office",
+        "icd10_codes": "E11.22; N18.31",
+        "cpt_codes": "80048; 83036",
+        "paid_amount": 48.2,
+        "status": "paid"
+      },
+      {
+        "claim_id": "CL-1002",
+        "member_id": "BW-10001",
+        "service_date": "2026-09-22",
+        "paid_date": "2026-10-05",
+        "claim_type": "Professional",
+        "provider_npi": "9900000142",
+        "place_of_service": "11 Office",
+        "icd10_codes": "I50.22; E11.22",
+        "cpt_codes": "99214",
+        "paid_amount": 132.5,
+        "status": "paid",
+        "_flags": {
+          "service_date": "IMP-08"
+        }
+      },
+      {
+        "claim_id": "CL-2001",
+        "member_id": "BW-10002",
+        "service_date": "2026-03-12",
+        "paid_date": "2026-03-28",
+        "claim_type": "OP lab",
+        "provider_npi": "9900000145",
+        "place_of_service": "81 Lab",
+        "icd10_codes": "E11.9",
+        "cpt_codes": "83036",
+        "paid_amount": 18.4,
+        "status": "paid"
+      },
+      {
+        "claim_id": "CL-2002",
+        "member_id": "BW-10002",
+        "service_date": "2026-04-03",
+        "paid_date": "2026-04-19",
+        "claim_type": "Professional",
+        "provider_npi": "9900000145",
+        "place_of_service": "11 Office",
+        "icd10_codes": "E11.9; I10",
+        "cpt_codes": "99213",
+        "paid_amount": 96.1,
+        "status": "paid",
+        "_flags": {
+          "service_date": "IMP-24"
+        }
+      },
+      {
+        "claim_id": "CL-3001",
+        "member_id": "BW-10003",
+        "service_date": "2026-04-02",
+        "paid_date": "2026-04-20",
+        "claim_type": "Professional",
+        "provider_npi": "9900000170",
+        "place_of_service": "11 Office",
+        "icd10_codes": "J44.9; E11.9",
+        "cpt_codes": "99213",
+        "paid_amount": 96.1,
+        "status": "paid"
+      },
+      {
+        "claim_id": "CL-3002",
+        "member_id": "BW-10003",
+        "service_date": "2026-08-22",
+        "paid_date": "2026-09-14",
+        "claim_type": "ED",
+        "provider_npi": "9900000301",
+        "place_of_service": "23 ED",
+        "icd10_codes": "J44.1",
+        "cpt_codes": "99284",
+        "paid_amount": 1180.0,
+        "status": "paid",
+        "_flags": {
+          "icd10_codes": "IMP-13"
+        }
+      },
+      {
+        "claim_id": "CL-3003",
+        "member_id": "BW-10003",
+        "service_date": "2026-09-30",
+        "paid_date": "2026-10-24",
+        "claim_type": "ED",
+        "provider_npi": "9900000301",
+        "place_of_service": "23 ED",
+        "icd10_codes": "J45.901",
+        "cpt_codes": "99284",
+        "paid_amount": 1180.0,
+        "status": "paid",
+        "_flags": {
+          "icd10_codes": "IMP-13"
+        }
+      },
+      {
+        "claim_id": "CL-4001",
+        "member_id": "BW-10004",
+        "service_date": "2026-06-10",
+        "paid_date": "2026-06-27",
+        "claim_type": "Professional",
+        "provider_npi": "9900000160",
+        "place_of_service": "11 Office",
+        "icd10_codes": "I10",
+        "cpt_codes": "99213",
+        "paid_amount": 96.1,
+        "status": "paid"
+      },
+      {
+        "claim_id": "CL-4002",
+        "member_id": "BW-10004",
+        "service_date": "2026-07-14",
+        "paid_date": "2026-08-02",
+        "claim_type": "Professional",
+        "provider_npi": "9900000176",
+        "place_of_service": "11 Office",
+        "icd10_codes": "F31.9",
+        "cpt_codes": "90837",
+        "paid_amount": 145.0,
+        "status": "paid",
+        "_flags": {
+          "icd10_codes": "IMP-19"
+        }
+      },
+      {
+        "claim_id": "CL-5001",
+        "member_id": "BW-10005",
+        "service_date": "2026-09-02",
+        "paid_date": "2026-09-19",
+        "claim_type": "Professional",
+        "provider_npi": "9900000178",
+        "place_of_service": "11 Office",
+        "icd10_codes": "E11.9; M17.0",
+        "cpt_codes": "99214",
+        "paid_amount": 132.5,
+        "status": "paid",
+        "_flags": {
+          "icd10_codes": "IMP-23",
+          "service_date": "IMP-22"
+        }
+      }
+    ]
+  },
+  "D07": {
+    "name": "Pharmacy fills",
+    "priority": "Must",
+    "records": [
+      {
+        "fill_id": "RX-1001",
+        "member_id": "BW-10001",
+        "ndc": "11111-0201-30",
+        "drug_name": "Lisinopril 20 mg tab",
+        "ingredient": "lisinopril",
+        "strength": "20 mg",
+        "qty": 30,
+        "days_supply": 30,
+        "fill_date": "2026-10-08",
+        "pharmacy": "CareFirst Pharmacy #114",
+        "prescriber_npi": "9900000142",
+        "auto_refill": "Y",
+        "claim_status": "paid",
+        "pdc_ytd_pct": ""
+      },
+      {
+        "fill_id": "RX-1002",
+        "member_id": "BW-10001",
+        "ndc": "11111-0201-30",
+        "drug_name": "Lisinopril 20 mg tab",
+        "ingredient": "lisinopril",
+        "strength": "20 mg",
+        "qty": 30,
+        "days_supply": 30,
+        "fill_date": "2026-11-07",
+        "pharmacy": "CareFirst Pharmacy #114",
+        "prescriber_npi": "9900000142",
+        "auto_refill": "Y",
+        "claim_status": "paid",
+        "_flags": {
+          "fill_date": "IMP-02",
+          "auto_refill": "IMP-02"
+        },
+        "pdc_ytd_pct": ""
+      },
+      {
+        "fill_id": "RX-1003",
+        "member_id": "BW-10001",
+        "ndc": "22222-0124-60",
+        "drug_name": "Sacubitril/valsartan 24/26 mg tab",
+        "ingredient": "sacubitril/valsartan",
+        "strength": "24/26 mg",
+        "qty": 60,
+        "days_supply": 30,
+        "fill_date": "2026-11-06",
+        "pharmacy": "CareFirst Pharmacy #114",
+        "prescriber_npi": "9900000190",
+        "auto_refill": "N",
+        "claim_status": "rejected - 75 prior authorization required",
+        "_flags": {
+          "claim_status": "IMP-01"
+        },
+        "pdc_ytd_pct": ""
+      },
+      {
+        "fill_id": "RX-1004",
+        "member_id": "BW-10001",
+        "ndc": "33333-0040-30",
+        "drug_name": "Furosemide 40 mg tab",
+        "ingredient": "furosemide",
+        "strength": "40 mg",
+        "qty": 30,
+        "days_supply": 30,
+        "fill_date": "2026-10-20",
+        "pharmacy": "CareFirst Pharmacy #114",
+        "prescriber_npi": "9900000142",
+        "auto_refill": "Y",
+        "claim_status": "paid",
+        "_flags": {
+          "qty": "IMP-03"
+        },
+        "pdc_ytd_pct": ""
+      },
+      {
+        "fill_id": "RX-1005",
+        "member_id": "BW-10001",
+        "ndc": "44444-0050-30",
+        "drug_name": "Metoprolol succinate ER 50 mg",
+        "ingredient": "metoprolol",
+        "strength": "50 mg",
+        "qty": 30,
+        "days_supply": 30,
+        "fill_date": "2026-10-20",
+        "pharmacy": "CareFirst Pharmacy #114",
+        "prescriber_npi": "9900000142",
+        "auto_refill": "Y",
+        "claim_status": "paid",
+        "pdc_ytd_pct": ""
+      },
+      {
+        "fill_id": "RX-1006",
+        "member_id": "BW-10001",
+        "ndc": "55555-0500-60",
+        "drug_name": "Metformin 500 mg tab",
+        "ingredient": "metformin",
+        "strength": "500 mg",
+        "qty": 180,
+        "days_supply": 90,
+        "fill_date": "2026-10-15",
+        "pharmacy": "CareFirst Pharmacy #114",
+        "prescriber_npi": "9900000142",
+        "auto_refill": "Y",
+        "claim_status": "paid",
+        "pdc_ytd_pct": ""
+      },
+      {
+        "fill_id": "RX-1007",
+        "member_id": "BW-10001",
+        "ndc": "66666-0040-90",
+        "drug_name": "Atorvastatin 40 mg tab",
+        "ingredient": "atorvastatin",
+        "strength": "40 mg",
+        "qty": 90,
+        "days_supply": 90,
+        "fill_date": "2026-10-15",
+        "pharmacy": "CareFirst Pharmacy #114",
+        "prescriber_npi": "9900000142",
+        "auto_refill": "Y",
+        "claim_status": "paid",
+        "pdc_ytd_pct": ""
+      },
+      {
+        "fill_id": "RX-2001",
+        "member_id": "BW-10002",
+        "ndc": "55555-1000-60",
+        "drug_name": "Metformin 1000 mg tab",
+        "ingredient": "metformin",
+        "strength": "1000 mg",
+        "qty": 180,
+        "days_supply": 90,
+        "fill_date": "2026-01-05",
+        "pharmacy": "Main St Pharmacy",
+        "prescriber_npi": "9900000145",
+        "auto_refill": "N",
+        "claim_status": "paid",
+        "pdc_ytd_pct": 68.0
+      },
+      {
+        "fill_id": "RX-2002",
+        "member_id": "BW-10002",
+        "ndc": "55555-1000-60",
+        "drug_name": "Metformin 1000 mg tab",
+        "ingredient": "metformin",
+        "strength": "1000 mg",
+        "qty": 60,
+        "days_supply": 30,
+        "fill_date": "2026-04-28",
+        "pharmacy": "Main St Pharmacy",
+        "prescriber_npi": "9900000145",
+        "auto_refill": "N",
+        "claim_status": "paid",
+        "pdc_ytd_pct": 68.0
+      },
+      {
+        "fill_id": "RX-2003",
+        "member_id": "BW-10002",
+        "ndc": "55555-1000-60",
+        "drug_name": "Metformin 1000 mg tab",
+        "ingredient": "metformin",
+        "strength": "1000 mg",
+        "qty": 180,
+        "days_supply": 90,
+        "fill_date": "2026-07-28",
+        "pharmacy": "Main St Pharmacy",
+        "prescriber_npi": "9900000145",
+        "auto_refill": "N",
+        "claim_status": "reversed",
+        "_flags": {
+          "claim_status": "IMP-25"
+        },
+        "pdc_ytd_pct": 68.0
+      },
+      {
+        "fill_id": "RX-2004",
+        "member_id": "BW-10002",
+        "ndc": "55555-1000-60",
+        "drug_name": "Metformin 1000 mg tab",
+        "ingredient": "metformin",
+        "strength": "1000 mg",
+        "qty": 180,
+        "days_supply": 90,
+        "fill_date": "2026-07-28",
+        "pharmacy": "Main St Pharmacy",
+        "prescriber_npi": "9900000145",
+        "auto_refill": "N",
+        "claim_status": "paid",
+        "_flags": {
+          "fill_id": "IMP-25"
+        },
+        "pdc_ytd_pct": 68.0
+      },
+      {
+        "fill_id": "RX-2005",
+        "member_id": "BW-10002",
+        "ndc": "77777-0010-90",
+        "drug_name": "Lisinopril 10 mg tab",
+        "ingredient": "lisinopril",
+        "strength": "10 mg",
+        "qty": 90,
+        "days_supply": 90,
+        "fill_date": "2026-01-12",
+        "pharmacy": "Main St Pharmacy",
+        "prescriber_npi": "9900000145",
+        "auto_refill": "N",
+        "claim_status": "paid",
+        "pdc_ytd_pct": 60.0
+      },
+      {
+        "fill_id": "RX-2006",
+        "member_id": "BW-10002",
+        "ndc": "77777-0010-90",
+        "drug_name": "Lisinopril 10 mg tab",
+        "ingredient": "lisinopril",
+        "strength": "10 mg",
+        "qty": 90,
+        "days_supply": 90,
+        "fill_date": "2026-07-30",
+        "pharmacy": "Main St Pharmacy",
+        "prescriber_npi": "9900000145",
+        "auto_refill": "N",
+        "claim_status": "paid",
+        "pdc_ytd_pct": 60.0
+      },
+      {
+        "fill_id": "RX-2007",
+        "member_id": "BW-10002",
+        "ndc": "88888-0005-30",
+        "drug_name": "Glipizide 5 mg tab",
+        "ingredient": "glipizide",
+        "strength": "5 mg",
+        "qty": 30,
+        "days_supply": 30,
+        "fill_date": "2026-09-01",
+        "pharmacy": "Main St Pharmacy",
+        "prescriber_npi": "9900000310",
+        "auto_refill": "N",
+        "claim_status": "paid",
+        "_flags": {
+          "prescriber_npi": "IMP-26"
+        },
+        "pdc_ytd_pct": ""
+      },
+      {
+        "fill_id": "RX-3001",
+        "member_id": "BW-10003",
+        "ndc": "12121-0090-01",
+        "drug_name": "Albuterol HFA inhaler",
+        "ingredient": "albuterol",
+        "strength": "90 mcg/act",
+        "qty": 1,
+        "days_supply": 25,
+        "fill_date": "2026-08-23",
+        "pharmacy": "Eastside Discount Rx",
+        "prescriber_npi": "9900000301",
+        "auto_refill": "N",
+        "claim_status": "paid",
+        "pdc_ytd_pct": ""
+      },
+      {
+        "fill_id": "RX-3002",
+        "member_id": "BW-10003",
+        "ndc": "12121-0090-01",
+        "drug_name": "Albuterol HFA inhaler",
+        "ingredient": "albuterol",
+        "strength": "90 mcg/act",
+        "qty": 1,
+        "days_supply": 25,
+        "fill_date": "2026-09-30",
+        "pharmacy": "Eastside Discount Rx",
+        "prescriber_npi": "9900000301",
+        "auto_refill": "N",
+        "claim_status": "paid",
+        "pdc_ytd_pct": ""
+      },
+      {
+        "fill_id": "RX-3003",
+        "member_id": "BW-10003",
+        "ndc": "12121-0090-01",
+        "drug_name": "Albuterol HFA inhaler",
+        "ingredient": "albuterol",
+        "strength": "90 mcg/act",
+        "qty": 1,
+        "days_supply": 25,
+        "fill_date": "2026-10-20",
+        "pharmacy": "Eastside Discount Rx",
+        "prescriber_npi": "9900000301",
+        "auto_refill": "N",
+        "claim_status": "paid",
+        "pdc_ytd_pct": ""
+      },
+      {
+        "fill_id": "RX-3004",
+        "member_id": "BW-10003",
+        "ndc": "12121-0090-01",
+        "drug_name": "Albuterol HFA inhaler",
+        "ingredient": "albuterol",
+        "strength": "90 mcg/act",
+        "qty": 1,
+        "days_supply": 25,
+        "fill_date": "2026-11-08",
+        "pharmacy": "Eastside Discount Rx",
+        "prescriber_npi": "9900000301",
+        "auto_refill": "N",
+        "claim_status": "paid",
+        "pdc_ytd_pct": ""
+      },
+      {
+        "fill_id": "RX-3005",
+        "member_id": "BW-10003",
+        "ndc": "13131-0250-01",
+        "drug_name": "Fluticasone/salmeterol 250/50 inhaler",
+        "ingredient": "fluticasone/salmeterol",
+        "strength": "250/50 mcg",
+        "qty": 1,
+        "days_supply": 30,
+        "fill_date": "2026-07-11",
+        "pharmacy": "Eastside Discount Rx",
+        "prescriber_npi": "9900000170",
+        "auto_refill": "N",
+        "claim_status": "paid",
+        "_flags": {
+          "fill_date": "IMP-11"
+        },
+        "pdc_ytd_pct": ""
+      },
+      {
+        "fill_id": "RX-3006",
+        "member_id": "BW-10003",
+        "ndc": "55555-0500-60",
+        "drug_name": "Metformin 500 mg tab",
+        "ingredient": "metformin",
+        "strength": "500 mg",
+        "qty": 60,
+        "days_supply": 30,
+        "fill_date": "2026-10-14",
+        "pharmacy": "Eastside Discount Rx",
+        "prescriber_npi": "9900000170",
+        "auto_refill": "N",
+        "claim_status": "paid",
+        "pdc_ytd_pct": ""
+      },
+      {
+        "fill_id": "RX-4001",
+        "member_id": "BW-10004",
+        "ndc": "14141-0010-07",
+        "drug_name": "Aripiprazole 10 mg tab",
+        "ingredient": "aripiprazole",
+        "strength": "10 mg",
+        "qty": 7,
+        "days_supply": 7,
+        "fill_date": "2026-11-05",
+        "pharmacy": "Riverside BH Outpatient Pharmacy",
+        "prescriber_npi": "9900000195",
+        "auto_refill": "N",
+        "claim_status": "paid",
+        "_flags": {
+          "days_supply": "IMP-20"
+        },
+        "pdc_ytd_pct": ""
+      },
+      {
+        "fill_id": "RX-4002",
+        "member_id": "BW-10004",
+        "ndc": "15151-0005-30",
+        "drug_name": "Amlodipine 5 mg tab",
+        "ingredient": "amlodipine",
+        "strength": "5 mg",
+        "qty": 30,
+        "days_supply": 30,
+        "fill_date": "2026-08-06",
+        "pharmacy": "Linden Ave Pharmacy",
+        "prescriber_npi": "9900000160",
+        "auto_refill": "N",
+        "claim_status": "paid",
+        "_flags": {
+          "fill_date": "IMP-20"
+        },
+        "pdc_ytd_pct": ""
+      },
+      {
+        "fill_id": "RX-5001",
+        "member_id": "BW-10005",
+        "ndc": "55555-0500-60",
+        "drug_name": "Metformin 500 mg tab",
+        "ingredient": "metformin",
+        "strength": "500 mg",
+        "qty": 60,
+        "days_supply": 30,
+        "fill_date": "2026-10-28",
+        "pharmacy": "Parsons Ave Pharmacy",
+        "prescriber_npi": "9900000178",
+        "auto_refill": "Y",
+        "claim_status": "paid",
+        "_flags": {
+          "fill_date": "IMP-24b"
+        },
+        "pdc_ytd_pct": ""
+      },
+      {
+        "fill_id": "RX-5002",
+        "member_id": "BW-10005",
+        "ndc": "16161-0010-30",
+        "drug_name": "Donepezil 10 mg tab",
+        "ingredient": "donepezil",
+        "strength": "10 mg",
+        "qty": 30,
+        "days_supply": 30,
+        "fill_date": "2026-10-28",
+        "pharmacy": "Parsons Ave Pharmacy",
+        "prescriber_npi": "9900000178",
+        "auto_refill": "Y",
+        "claim_status": "paid",
+        "pdc_ytd_pct": ""
+      },
+      {
+        "fill_id": "RX-5003",
+        "member_id": "BW-10005",
+        "ndc": "17171-0005-30",
+        "drug_name": "Amlodipine 5 mg tab",
+        "ingredient": "amlodipine",
+        "strength": "5 mg",
+        "qty": 30,
+        "days_supply": 30,
+        "fill_date": "2026-10-28",
+        "pharmacy": "Parsons Ave Pharmacy",
+        "prescriber_npi": "9900000178",
+        "auto_refill": "Y",
+        "claim_status": "paid",
+        "pdc_ytd_pct": ""
+      }
+    ]
+  },
+  "D08": {
+    "name": "EHR medication & problem list",
+    "priority": "Should",
+    "records": [
+      {
+        "ehr_item_id": "EHR-1001",
+        "member_id": "BW-10001",
+        "item_type": "med",
+        "name": "Lisinopril",
+        "dose": "20 mg daily",
+        "status": "active",
+        "last_reconciled_date": "2026-08-12",
+        "source_practice": "Velasco Family Medicine",
+        "_flags": {
+          "status": "IMP-02"
+        }
+      },
+      {
+        "ehr_item_id": "EHR-1002",
+        "member_id": "BW-10001",
+        "item_type": "med",
+        "name": "Furosemide",
+        "dose": "40 mg daily",
+        "status": "active",
+        "last_reconciled_date": "2026-08-12",
+        "source_practice": "Velasco Family Medicine",
+        "_flags": {
+          "dose": "IMP-03"
+        }
+      },
+      {
+        "ehr_item_id": "EHR-1003",
+        "member_id": "BW-10001",
+        "item_type": "med",
+        "name": "Metoprolol succinate",
+        "dose": "50 mg daily",
+        "status": "active",
+        "last_reconciled_date": "2026-08-12",
+        "source_practice": "Velasco Family Medicine"
+      },
+      {
+        "ehr_item_id": "EHR-1004",
+        "member_id": "BW-10001",
+        "item_type": "med",
+        "name": "Metformin",
+        "dose": "500 mg BID",
+        "status": "active",
+        "last_reconciled_date": "2026-08-12",
+        "source_practice": "Velasco Family Medicine"
+      },
+      {
+        "ehr_item_id": "EHR-1005",
+        "member_id": "BW-10001",
+        "item_type": "problem",
+        "name": "I50.22 Chronic systolic heart failure",
+        "dose": "",
+        "status": "active",
+        "last_reconciled_date": "2026-08-12",
+        "source_practice": "Velasco Family Medicine"
+      },
+      {
+        "ehr_item_id": "EHR-2001",
+        "member_id": "BW-10002",
+        "item_type": "med",
+        "name": "Metformin",
+        "dose": "1000 mg BID",
+        "status": "active",
+        "last_reconciled_date": "2026-04-03",
+        "source_practice": "Liu Internal Medicine"
+      },
+      {
+        "ehr_item_id": "EHR-2002",
+        "member_id": "BW-10002",
+        "item_type": "med",
+        "name": "Lisinopril",
+        "dose": "10 mg daily",
+        "status": "active",
+        "last_reconciled_date": "2026-04-03",
+        "source_practice": "Liu Internal Medicine"
+      },
+      {
+        "ehr_item_id": "EHR-2003",
+        "member_id": "BW-10002",
+        "item_type": "problem",
+        "name": "E11.9 Type 2 diabetes without complications",
+        "dose": "",
+        "status": "active",
+        "last_reconciled_date": "2026-04-03",
+        "source_practice": "Liu Internal Medicine"
+      },
+      {
+        "ehr_item_id": "EHR-3001",
+        "member_id": "BW-10003",
+        "item_type": "med",
+        "name": "Fluticasone/salmeterol 250/50",
+        "dose": "1 puff BID",
+        "status": "active",
+        "last_reconciled_date": "2026-04-02",
+        "source_practice": "Northgate Family Health"
+      },
+      {
+        "ehr_item_id": "EHR-3002",
+        "member_id": "BW-10003",
+        "item_type": "problem",
+        "name": "J44.9 COPD, unspecified",
+        "dose": "",
+        "status": "active",
+        "last_reconciled_date": "2026-04-02",
+        "source_practice": "Northgate Family Health",
+        "_flags": {
+          "name": "IMP-13"
+        }
+      },
+      {
+        "ehr_item_id": "EHR-5001",
+        "member_id": "BW-10005",
+        "item_type": "problem",
+        "name": "E11.22 Type 2 diabetes with diabetic CKD",
+        "dose": "",
+        "status": "active",
+        "last_reconciled_date": "2026-03-18",
+        "source_practice": "Ortega Primary Care"
+      },
+      {
+        "ehr_item_id": "EHR-5002",
+        "member_id": "BW-10005",
+        "item_type": "problem",
+        "name": "N18.32 CKD stage 3b",
+        "dose": "",
+        "status": "active",
+        "last_reconciled_date": "2026-03-18",
+        "source_practice": "Ortega Primary Care",
+        "_flags": {
+          "name": "IMP-23"
+        }
+      },
+      {
+        "ehr_item_id": "EHR-5003",
+        "member_id": "BW-10005",
+        "item_type": "problem",
+        "name": "G30.1 Alzheimer's disease, late onset",
+        "dose": "",
+        "status": "active",
+        "last_reconciled_date": "2026-03-18",
+        "source_practice": "Ortega Primary Care"
+      },
+      {
+        "ehr_item_id": "EHR-5004",
+        "member_id": "BW-10005",
+        "item_type": "med",
+        "name": "Metformin",
+        "dose": "500 mg BID",
+        "status": "active",
+        "last_reconciled_date": "2026-03-18",
+        "source_practice": "Ortega Primary Care",
+        "_flags": {
+          "status": "IMP-24b"
+        }
+      }
+    ]
+  },
+  "D09": {
+    "name": "Lab results",
+    "priority": "Should",
+    "records": [
+      {
+        "lab_id": "LAB-1001",
+        "member_id": "BW-10001",
+        "loinc": "30934-4",
+        "test_name": "BNP",
+        "value": 1240,
+        "unit": "pg/mL",
+        "ref_range": "<100",
+        "flag": "H",
+        "collected_date": "2026-11-03",
+        "source": "St. Brigid lab"
+      },
+      {
+        "lab_id": "LAB-1002",
+        "member_id": "BW-10001",
+        "loinc": "2823-3",
+        "test_name": "Potassium",
+        "value": 5.1,
+        "unit": "mmol/L",
+        "ref_range": "3.5-5.1",
+        "flag": "high-normal",
+        "collected_date": "2026-11-06",
+        "source": "St. Brigid lab"
+      },
+      {
+        "lab_id": "LAB-1003",
+        "member_id": "BW-10001",
+        "loinc": "2160-0",
+        "test_name": "Creatinine",
+        "value": 1.6,
+        "unit": "mg/dL",
+        "ref_range": "0.7-1.3",
+        "flag": "H",
+        "collected_date": "2026-11-06",
+        "source": "St. Brigid lab"
+      },
+      {
+        "lab_id": "LAB-1004",
+        "member_id": "BW-10001",
+        "loinc": "98979-8",
+        "test_name": "eGFR (CKD-EPI 2021)",
+        "value": 44,
+        "unit": "mL/min/1.73m2",
+        "ref_range": ">60",
+        "flag": "L",
+        "collected_date": "2026-11-06",
+        "source": "St. Brigid lab"
+      },
+      {
+        "lab_id": "LAB-2001",
+        "member_id": "BW-10002",
+        "loinc": "4548-4",
+        "test_name": "Hemoglobin A1c",
+        "value": 7.4,
+        "unit": "%",
+        "ref_range": "<7.0",
+        "flag": "H",
+        "collected_date": "2026-03-12",
+        "source": "Liu Internal Medicine"
+      },
+      {
+        "lab_id": "LAB-2002",
+        "member_id": "BW-10002",
+        "loinc": "4548-4",
+        "test_name": "Hemoglobin A1c",
+        "value": 9.1,
+        "unit": "%",
+        "ref_range": "<7.0",
+        "flag": "H",
+        "collected_date": "2026-10-21",
+        "source": "QuestPoint Labs (outside lab)"
+      },
+      {
+        "lab_id": "LAB-2003",
+        "member_id": "BW-10002",
+        "loinc": "14749-6",
+        "test_name": "Glucose, fasting",
+        "value": 10.8,
+        "unit": "mmol/L",
+        "ref_range": "3.9-5.5",
+        "flag": "H",
+        "collected_date": "2026-10-21",
+        "source": "QuestPoint Labs (outside lab)",
+        "normalized_value": "195 mg/dL",
+        "_flags": {
+          "unit": "IMP-27",
+          "value": "IMP-27"
+        }
+      },
+      {
+        "lab_id": "LAB-3001",
+        "member_id": "BW-10003",
+        "loinc": "4548-4",
+        "test_name": "Hemoglobin A1c",
+        "value": 8.2,
+        "unit": "%",
+        "ref_range": "<7.0",
+        "flag": "H",
+        "collected_date": "2026-04-02",
+        "source": "Northgate Family Health"
+      },
+      {
+        "lab_id": "LAB-5001",
+        "member_id": "BW-10005",
+        "loinc": "98979-8",
+        "test_name": "eGFR (CKD-EPI 2021)",
+        "value": 24,
+        "unit": "mL/min/1.73m2",
+        "ref_range": ">60",
+        "flag": "L",
+        "collected_date": "2026-10-20",
+        "source": "Ortega Primary Care",
+        "_flags": {
+          "value": "IMP-24b"
+        }
+      },
+      {
+        "lab_id": "LAB-5002",
+        "member_id": "BW-10005",
+        "loinc": "4548-4",
+        "test_name": "Hemoglobin A1c",
+        "value": 7.0,
+        "unit": "%",
+        "ref_range": "<7.0",
+        "flag": "borderline",
+        "collected_date": "2026-10-20",
+        "source": "Ortega Primary Care"
+      }
+    ]
+  },
+  "D10": {
+    "name": "Appointments & scheduling",
+    "priority": "Should",
+    "records": [
+      {
+        "appt_id": "AP-1001",
+        "member_id": "BW-10001",
+        "provider_npi": "9900000190",
+        "appt_datetime": "2026-11-20 10:30",
+        "visit_type": "Cardiology follow-up",
+        "status": "scheduled",
+        "source": "St. Brigid scheduling feed",
+        "_flags": {
+          "appt_datetime": "IMP-09"
+        }
+      },
+      {
+        "appt_id": "AP-2001",
+        "member_id": "BW-10002",
+        "provider_npi": "9900000145",
+        "appt_datetime": "2026-09-15 09:00",
+        "visit_type": "PCP diabetes follow-up",
+        "status": "no-show",
+        "source": "Liu Internal Medicine feed"
+      },
+      {
+        "appt_id": "AP-3001",
+        "member_id": "BW-10003",
+        "provider_npi": "9900000170",
+        "appt_datetime": "2026-10-27 14:00",
+        "visit_type": "PCP post-ED follow-up",
+        "status": "no-show",
+        "source": "Northgate scheduling feed"
+      },
+      {
+        "appt_id": "AP-5001",
+        "member_id": "BW-10005",
+        "provider_npi": "9900000178",
+        "appt_datetime": "2026-11-17 15:00",
+        "visit_type": "PCP post-fall follow-up",
+        "status": "scheduled",
+        "source": "Ortega Primary Care feed"
+      }
+    ]
+  },
+  "D11": {
+    "name": "Provider directory (HiLabs-verified)",
+    "priority": "Must",
+    "records": [
+      {
+        "provider_npi": "9900000142",
+        "name": "Dr. Anita Velasco",
+        "specialty": "Family Medicine",
+        "practice": "Velasco Family Medicine",
+        "address": "2200 N High St, Columbus OH 43201",
+        "phone": "614-555-0142",
+        "directory_phone_on_plan_file": "614-555-0119",
+        "accepting_new": "Y",
+        "telehealth": "Y",
+        "verified_date": "2026-11-02",
+        "verification_confidence": "High",
+        "language": "English, Spanish",
+        "_flags": {
+          "directory_phone_on_plan_file": "IMP-09b"
+        }
+      },
+      {
+        "provider_npi": "9900000145",
+        "name": "Dr. Kevin Liu",
+        "specialty": "Internal Medicine",
+        "practice": "Liu Internal Medicine",
+        "address": "45 Morse Rd, Columbus OH 43229",
+        "phone": "614-555-0145",
+        "directory_phone_on_plan_file": "614-555-0145",
+        "accepting_new": "Y",
+        "telehealth": "Y",
+        "verified_date": "2026-10-28",
+        "verification_confidence": "High",
+        "language": "English"
+      },
+      {
+        "provider_npi": "9900000170",
+        "name": "Dr. Grace Holloway",
+        "specialty": "Family Medicine",
+        "practice": "Northgate Family Health - 5th St",
+        "address": "610 E 5th Ave, Columbus OH 43201",
+        "phone": "614-555-0171",
+        "directory_phone_on_plan_file": "614-555-0170 (Northgate - Cleveland Ave, CLOSED Aug 2026)",
+        "accepting_new": "Y",
+        "telehealth": "N",
+        "verified_date": "2026-10-30",
+        "verification_confidence": "High",
+        "language": "English",
+        "_flags": {
+          "directory_phone_on_plan_file": "IMP-14"
+        }
+      },
+      {
+        "provider_npi": "9900000160",
+        "name": "Dr. Ruth Abernathy",
+        "specialty": "Family Medicine",
+        "practice": "Linden Community Clinic",
+        "address": "1100 Cleveland Ave, Columbus OH 43211",
+        "phone": "614-555-0161",
+        "directory_phone_on_plan_file": "614-555-0161",
+        "accepting_new": "Y",
+        "telehealth": "Y",
+        "verified_date": "2026-10-25",
+        "verification_confidence": "High",
+        "language": "English"
+      },
+      {
+        "provider_npi": "9900000176",
+        "name": "Dr. Samuel Okafor",
+        "specialty": "Psychiatry",
+        "practice": "Riverside Outpatient Psychiatry",
+        "address": "330 W Spring St, Columbus OH 43215",
+        "phone": "614-555-0176",
+        "directory_phone_on_plan_file": "614-555-0176",
+        "accepting_new": "Y",
+        "telehealth": "Y",
+        "verified_date": "2026-11-04",
+        "verification_confidence": "High",
+        "language": "English"
+      },
+      {
+        "provider_npi": "9900000178",
+        "name": "Dr. Maribel Ortega",
+        "specialty": "Internal Medicine",
+        "practice": "Ortega Primary Care",
+        "address": "1650 Parsons Ave, Columbus OH 43207",
+        "phone": "614-555-0178",
+        "directory_phone_on_plan_file": "614-555-0178",
+        "accepting_new": "N",
+        "telehealth": "Y",
+        "verified_date": "2026-10-31",
+        "verification_confidence": "High",
+        "language": "Spanish, English"
+      },
+      {
+        "provider_npi": "9900000190",
+        "name": "Dr. Rachel Okonjo",
+        "specialty": "Cardiology",
+        "practice": "St. Brigid Heart Institute",
+        "address": "500 Brigid Way, Columbus OH 43214",
+        "phone": "614-555-0192",
+        "directory_phone_on_plan_file": "614-555-0192",
+        "accepting_new": "Y",
+        "telehealth": "Y",
+        "verified_date": "2026-11-01",
+        "verification_confidence": "High",
+        "language": "English"
+      },
+      {
+        "provider_npi": "9900000310",
+        "name": "QuickCare Urgent Care - Morse",
+        "specialty": "Urgent Care",
+        "practice": "QuickCare",
+        "address": "88 Morse Rd, Columbus OH 43229",
+        "phone": "614-555-0180",
+        "directory_phone_on_plan_file": "614-555-0180",
+        "accepting_new": "Y",
+        "telehealth": "N",
+        "verified_date": "2026-09-30",
+        "verification_confidence": "Medium",
+        "language": "English"
+      }
+    ]
+  },
+  "D12": {
+    "name": "Prior authorizations",
+    "priority": "Should",
+    "records": [
+      {
+        "auth_id": "PA-5001",
+        "member_id": "BW-10005",
+        "service": "DME - semi-electric hospital bed",
+        "requested_date": "2026-10-31",
+        "status": "pending",
+        "decision_date": "",
+        "reviewer": "UM queue (unassigned)",
+        "days_pending": 9,
+        "_flags": {
+          "status": "IMP-30"
+        }
+      },
+      {
+        "auth_id": "PA-5002",
+        "member_id": "BW-10005",
+        "service": "Home health PT evaluation",
+        "requested_date": "2026-10-26",
+        "status": "approved",
+        "decision_date": "2026-10-28",
+        "reviewer": "UM RN T. Fischer",
+        "days_pending": 0
+      },
+      {
+        "auth_id": "PA-1001",
+        "member_id": "BW-10001",
+        "service": "Pharmacy PA - sacubitril/valsartan",
+        "requested_date": "",
+        "status": "not submitted",
+        "decision_date": "",
+        "reviewer": "",
+        "days_pending": "",
+        "_flags": {
+          "status": "IMP-01"
+        }
+      }
+    ]
+  },
+  "D13": {
+    "name": "Risk scores",
+    "priority": "Must",
+    "records": [
+      {
+        "member_id": "BW-10001",
+        "model": "30-day readmission",
+        "score": 0.41,
+        "percentile": 92,
+        "top_drivers": "HF admission; CKD; age >75; 2+ admits in 12 mo",
+        "run_date": "2026-11-08"
+      },
+      {
+        "member_id": "BW-10002",
+        "model": "Rising risk (claims-based)",
+        "score": 0.22,
+        "percentile": 78,
+        "top_drivers": "Diabetes; utilization stable; no recent admits",
+        "run_date": "2026-11-01",
+        "_flags": {
+          "top_drivers": "IMP-28"
+        }
+      },
+      {
+        "member_id": "BW-10003",
+        "model": "Total cost (12-mo)",
+        "score": 0.37,
+        "percentile": 88,
+        "top_drivers": "ED frequency; COPD/asthma; diabetes; housing",
+        "run_date": "2026-11-01"
+      },
+      {
+        "member_id": "BW-10004",
+        "model": "30-day readmission (BH)",
+        "score": 0.33,
+        "percentile": 85,
+        "top_drivers": "Psych admission; housing instability; prior readmit",
+        "run_date": "2026-11-06"
+      },
+      {
+        "member_id": "BW-10005",
+        "model": "Total cost (12-mo)",
+        "score": 0.3,
+        "percentile": 80,
+        "top_drivers": "Dementia; CKD; falls; age >80",
+        "run_date": "2026-11-01"
+      }
+    ]
+  },
+  "D14": {
+    "name": "SDOH / HRA screens",
+    "priority": "Should",
+    "records": [
+      {
+        "screen_id": "SD-1001",
+        "member_id": "BW-10001",
+        "screen_date": "2026-02-14",
+        "tool": "AHC-HRSN",
+        "housing": "Stable",
+        "food": "No",
+        "transport": "Sometimes a problem",
+        "utilities": "No",
+        "safety": "No",
+        "social_isolation": "Low",
+        "phone_access": "Landline",
+        "self_reported": "Y",
+        "_flags": {
+          "screen_date": "IMP-15",
+          "phone_access": "IMP-06"
+        }
+      },
+      {
+        "screen_id": "SD-2001",
+        "member_id": "BW-10002",
+        "screen_date": "2026-01-08",
+        "tool": "HRA (annual)",
+        "housing": "Stable",
+        "food": "Sometimes worried",
+        "transport": "No",
+        "utilities": "No",
+        "safety": "No",
+        "social_isolation": "Low",
+        "phone_access": "Mobile",
+        "self_reported": "Y",
+        "_flags": {
+          "screen_date": "IMP-15b"
+        }
+      },
+      {
+        "screen_id": "SD-3001",
+        "member_id": "BW-10003",
+        "screen_date": "2025-06-03",
+        "tool": "AHC-HRSN",
+        "housing": "Unstable - renting a room",
+        "food": "Often worried",
+        "transport": "No reliable transport",
+        "utilities": "Yes - shutoff notice",
+        "safety": "No",
+        "social_isolation": "High",
+        "phone_access": "Prepaid mobile",
+        "self_reported": "Y",
+        "_flags": {
+          "screen_date": "IMP-16"
+        }
+      },
+      {
+        "screen_id": "SD-4001",
+        "member_id": "BW-10004",
+        "screen_date": "2025-09-12",
+        "tool": "AHC-HRSN",
+        "housing": "Stable",
+        "food": "No",
+        "transport": "No",
+        "utilities": "No",
+        "safety": "No",
+        "social_isolation": "Moderate",
+        "phone_access": "Prepaid mobile",
+        "self_reported": "Y",
+        "_flags": {
+          "screen_date": "IMP-17",
+          "housing": "IMP-17"
+        }
+      },
+      {
+        "screen_id": "SD-5001",
+        "member_id": "BW-10005",
+        "screen_date": "2026-04-09",
+        "tool": "HRA (annual)",
+        "housing": "Stable - lives with daughter",
+        "food": "No",
+        "transport": "Depends on daughter",
+        "utilities": "No",
+        "safety": "Fall risk at home",
+        "social_isolation": "Moderate",
+        "phone_access": "Landline + daughter's mobile",
+        "self_reported": "Caregiver-reported",
+        "_flags": {
+          "screen_date": "IMP-15c"
+        }
+      }
+    ]
+  },
+  "D15": {
+    "name": "Caregiver / authorized representative",
+    "priority": "Should",
+    "records": [
+      {
+        "caregiver_id": "CG-1001",
+        "member_id": "BW-10001",
+        "name": "Karen Brennan",
+        "relationship": "Daughter",
+        "contact_id": "C-1002",
+        "hipaa_auth_on_file": "Y",
+        "auth_expiry": "2027-05-31",
+        "lives_with_member": "N",
+        "strain_indicator": "Low",
+        "language": "English",
+        "best_window": "12:00-13:00"
+      },
+      {
+        "caregiver_id": "CG-1002",
+        "member_id": "BW-10001",
+        "name": "Joan Brennan",
+        "relationship": "Spouse",
+        "contact_id": "C-1001",
+        "hipaa_auth_on_file": "Y",
+        "auth_expiry": "2027-05-31",
+        "lives_with_member": "Y",
+        "strain_indicator": "Moderate",
+        "language": "English",
+        "best_window": ""
+      },
+      {
+        "caregiver_id": "CG-3001",
+        "member_id": "BW-10003",
+        "name": "Denise Reid",
+        "relationship": "Sister",
+        "contact_id": "C-3004",
+        "hipaa_auth_on_file": "N",
+        "auth_expiry": "",
+        "lives_with_member": "N",
+        "strain_indicator": "Unknown",
+        "language": "English",
+        "best_window": "",
+        "_flags": {
+          "hipaa_auth_on_file": "IMP-29"
+        }
+      },
+      {
+        "caregiver_id": "CG-5001",
+        "member_id": "BW-10005",
+        "name": "Lucia Ruiz",
+        "relationship": "Daughter",
+        "contact_id": "C-5002",
+        "hipaa_auth_on_file": "Y",
+        "auth_expiry": "2026-09-30",
+        "lives_with_member": "Y",
+        "strain_indicator": "High (Zarit-4 = 12 on 15 Oct)",
+        "language": "Spanish",
+        "best_window": "19:00-20:00",
+        "_flags": {
+          "auth_expiry": "IMP-29b"
+        }
+      }
+    ]
+  },
+  "D16": {
+    "name": "Case record",
+    "priority": "Must",
+    "records": [
+      {
+        "case_id": "CASE-1001",
+        "member_id": "BW-10001",
+        "program": "TOC + DM-HF",
+        "opened": "2024-02-10",
+        "status": "Active",
+        "acuity": "High",
+        "last_assessment_date": "2026-05-12",
+        "next_reassessment_due": "2027-05-12",
+        "goals": "1) No HF readmission in 90 days; 2) Daily weights logged 6/7 days",
+        "barriers": "Transport (sometimes); complex med regimen",
+        "interventions": "Monthly calls; HF education; weight log review",
+        "open_tasks": "TOC contact within 2 business days of discharge (due Tue 10 Nov) | Owner: Maria",
+        "last_note": "20 Oct: Karen reports mild ankle swelling; advised to call PCP if weight up 2 kg.",
+        "advance_directive": "On file (2024)"
+      },
+      {
+        "case_id": "CASE-2001",
+        "member_id": "BW-10002",
+        "program": "DM-Diabetes",
+        "opened": "2025-01-15",
+        "status": "Active",
+        "acuity": "Moderate",
+        "last_assessment_date": "2026-01-15",
+        "next_reassessment_due": "2027-01-15",
+        "goals": "1) A1c < 7.5%; 2) PDC > 80% on all diabetes and BP meds",
+        "barriers": "New retiree income; side effects",
+        "interventions": "Quarterly calls; refill reminders",
+        "open_tasks": "Quarterly check-in (overdue since 29 Oct)",
+        "last_note": "29 Sep: Mentions stomach upset on metformin, 'thinking of taking it every other day'.",
+        "advance_directive": "Not on file"
+      },
+      {
+        "case_id": "CASE-3001",
+        "member_id": "BW-10003",
+        "program": "CCM",
+        "opened": "2025-11-20",
+        "status": "Unable to reach (UTR)",
+        "acuity": "High",
+        "last_assessment_date": "2025-11-20",
+        "next_reassessment_due": "2026-11-20",
+        "goals": "1) Reduce ED visits; 2) Controller inhaler daily",
+        "barriers": "Housing; transport; phone access",
+        "interventions": "Monthly calls; CHW referral (not completed)",
+        "open_tasks": "Case auto-closure scheduled Thu 12 Nov (3 UTR attempts + letter) | Owner: system",
+        "last_note": "22 Jul: Says he lost his inhaler spacer; out of minutes on phone often.",
+        "advance_directive": "Not on file",
+        "_flags": {
+          "status": "IMP-31"
+        }
+      },
+      {
+        "case_id": "CASE-4001",
+        "member_id": "BW-10004",
+        "program": "CCM + BH coordination",
+        "opened": "2024-10-02",
+        "status": "Active",
+        "acuity": "High",
+        "last_assessment_date": "2025-10-02",
+        "next_reassessment_due": "2026-10-02",
+        "goals": "1) Attend therapy monthly; 2) Medication adherence; 3) Stable housing",
+        "barriers": "Housing; distrust of phone calls",
+        "interventions": "SMS check-ins; co-managed with SW Jamal Price",
+        "open_tasks": "FUH 7-day follow-up after psych discharge (due Thu 12 Nov) | Annual reassessment OVERDUE since 2 Oct",
+        "last_note": "28 Oct: Responds to text; prefers not to talk on the phone. Worried about eviction.",
+        "advance_directive": "Not on file",
+        "_flags": {
+          "last_note": "IMP-32"
+        }
+      },
+      {
+        "case_id": "CASE-5001",
+        "member_id": "BW-10005",
+        "program": "CCM",
+        "opened": "2021-02-01",
+        "status": "Active",
+        "acuity": "High",
+        "last_assessment_date": "2025-11-12",
+        "next_reassessment_due": "2026-11-12",
+        "goals": "1) No falls with injury; 2) A1c 7-8% (no hypoglycemia); 3) Caregiver supported",
+        "barriers": "Dementia; caregiver strain; language",
+        "interventions": "Monthly calls with Lucia (Spanish); PT; DME",
+        "open_tasks": "Annual CCM reassessment (40 fields) due Thu 12 Nov | Hospital bed PA follow-up",
+        "last_note": "15 Oct: Lucia exhausted, works two jobs; asked about respite. Zarit-4 = 12.",
+        "advance_directive": "On file (2022) - DNR/POLST"
+      }
+    ]
+  },
+  "D17": {
+    "name": "Quality gap list (HEDIS / Stars)",
+    "priority": "Should",
+    "records": [
+      {
+        "gap_id": "QG-1001",
+        "member_id": "BW-10001",
+        "measure": "TRC - Patient engagement after discharge",
+        "status": "open",
+        "event_date": "2026-11-06",
+        "due_date": "2026-12-06"
+      },
+      {
+        "gap_id": "QG-1002",
+        "member_id": "BW-10001",
+        "measure": "TRC - Medication reconciliation post-discharge",
+        "status": "open",
+        "event_date": "2026-11-06",
+        "due_date": "2026-12-07"
+      },
+      {
+        "gap_id": "QG-1003",
+        "member_id": "BW-10001",
+        "measure": "TRC - Receipt of discharge information",
+        "status": "closed",
+        "event_date": "2026-11-06",
+        "due_date": "2026-11-08"
+      },
+      {
+        "gap_id": "QG-2001",
+        "member_id": "BW-10002",
+        "measure": "Medication adherence - diabetes (PDC-DR, 3x Star)",
+        "status": "at risk",
+        "event_date": "",
+        "due_date": "2026-12-31"
+      },
+      {
+        "gap_id": "QG-2002",
+        "member_id": "BW-10002",
+        "measure": "Medication adherence - RAS antagonists (PDC-RASA, 3x Star)",
+        "status": "at risk",
+        "event_date": "",
+        "due_date": "2026-12-31"
+      },
+      {
+        "gap_id": "QG-3001",
+        "member_id": "BW-10003",
+        "measure": "Asthma medication ratio (AMR)",
+        "status": "open",
+        "event_date": "",
+        "due_date": "2026-12-31"
+      },
+      {
+        "gap_id": "QG-4001",
+        "member_id": "BW-10004",
+        "measure": "FUH - Follow-up after hospitalization for mental illness (7-day)",
+        "status": "open",
+        "event_date": "2026-11-05",
+        "due_date": "2026-11-12"
+      },
+      {
+        "gap_id": "QG-5001",
+        "member_id": "BW-10005",
+        "measure": "Medication adherence - diabetes (PDC-DR)",
+        "status": "open - review",
+        "event_date": "",
+        "due_date": "2026-12-31",
+        "note": "Metformin likely to be stopped (eGFR 24); gap must defer to clinical judgment",
+        "_flags": {
+          "status": "IMP-24b"
+        }
+      }
+    ]
+  },
+  "D18": {
+    "name": "Remote patient monitoring",
+    "priority": "Later",
+    "records": [
+      {
+        "reading_id": "RPM-1001",
+        "member_id": "BW-10001",
+        "device": "Bluetooth scale",
+        "metric": "Weight",
+        "value": 84.2,
+        "unit": "kg",
+        "reading_datetime": "2026-11-06 19:10"
+      },
+      {
+        "reading_id": "RPM-1002",
+        "member_id": "BW-10001",
+        "device": "Bluetooth scale",
+        "metric": "Weight",
+        "value": 84.9,
+        "unit": "kg",
+        "reading_datetime": "2026-11-07 07:40"
+      },
+      {
+        "reading_id": "RPM-1003",
+        "member_id": "BW-10001",
+        "device": "Bluetooth scale",
+        "metric": "Weight",
+        "value": 86.0,
+        "unit": "kg",
+        "reading_datetime": "2026-11-08 07:35"
+      }
+    ]
+  },
+  "D19": {
+    "name": "Behavioral health encounters (consent-gated)",
+    "priority": "Later",
+    "records": [
+      {
+        "bh_id": "BH-4001",
+        "member_id": "BW-10004",
+        "encounter_date": "2026-10-02",
+        "type": "Outpatient therapy",
+        "provider": "Riverside Outpatient Psychiatry",
+        "consent_flag": "Coordination allowed (42 CFR Part 2 consent on file)"
+      },
+      {
+        "bh_id": "BH-4002",
+        "member_id": "BW-10004",
+        "encounter_date": "2026-10-30",
+        "type": "Inpatient psych admission",
+        "provider": "Riverside Behavioral Health",
+        "consent_flag": "Coordination allowed (42 CFR Part 2 consent on file)"
+      }
+    ]
+  },
+  "D20": {
+    "name": "Member services call log",
+    "priority": "Later",
+    "records": [
+      {
+        "ticket_id": "MS-3001",
+        "member_id": "BW-10003",
+        "datetime": "2026-10-02 19:12",
+        "reason": "Lost ID card - replacement mailed",
+        "new_contact_value": "614-555-0187 (mobile, member)",
+        "resolved": "Y",
+        "propagated_to_case_system": "N",
+        "_flags": {
+          "new_contact_value": "IMP-10b",
+          "propagated_to_case_system": "IMP-10b"
+        }
+      },
+      {
+        "ticket_id": "MS-5001",
+        "member_id": "BW-10005",
+        "datetime": "2026-11-05 18:40",
+        "reason": "Daughter asked status of hospital bed request",
+        "new_contact_value": "",
+        "resolved": "N",
+        "propagated_to_case_system": "N"
+      }
+    ]
+  }
+}

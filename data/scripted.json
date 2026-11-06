@@ -1,0 +1,1837 @@
+{
+  "personas": {
+    "BW-10001": {
+      "member_id": "BW-10001",
+      "headline": "Discharged Fri after HF admission. Entresto never reached him; stopped lisinopril was refilled.",
+      "brief": [
+        {
+          "text": "Admitted 3 Nov to St. Brigid for acute-on-chronic systolic heart failure; discharged Fri 6 Nov 14:10 (day 3 of 7 today).",
+          "cites": [
+            "ADT-1001",
+            "ADT-1002",
+            "DOC-1001"
+          ]
+        },
+        {
+          "text": "Discharge plan: STOP lisinopril, START sacubitril/valsartan 24/26 mg BID after a 36 h washout, furosemide up to 40 mg BID.",
+          "cites": [
+            "DOC-1001"
+          ]
+        },
+        {
+          "text": "Pharmacy: Entresto claim rejected for prior authorization on 6 Nov; lisinopril auto-refilled Sat 7 Nov. Furosemide on hand is the old once-daily supply.",
+          "cites": [
+            "RX-1003",
+            "RX-1002",
+            "RX-1004"
+          ]
+        },
+        {
+          "text": "Weight up 1.8 kg since discharge (84.2 -> 86.0 kg); K 5.1, creatinine 1.6 at discharge.",
+          "cites": [
+            "RPM-1001",
+            "RPM-1003",
+            "LAB-1002",
+            "LAB-1003"
+          ]
+        },
+        {
+          "text": "No PCP visit booked inside the 7-day window; cardiology is 20 Nov (day 14).",
+          "cites": [
+            "AP-1001",
+            "D11:9900000142"
+          ]
+        },
+        {
+          "text": "Home line disconnected twice this weekend. Daughter Karen (HIPAA auth valid) has connected 3 of 3 times, around midday.",
+          "cites": [
+            "OA-1004",
+            "OA-1005",
+            "C-1002",
+            "CG-1001"
+          ]
+        }
+      ],
+      "conflicts": [
+        {
+          "id": "CF-1A",
+          "entity": "Lisinopril",
+          "severity": "safety",
+          "explanation": "The hospital stopped lisinopril, but the pharmacy refilled it on Saturday and the PCP list still shows it active. Taking it with Entresto is contraindicated (36 h washout required).",
+          "values": [
+            {
+              "label": "Discharge summary",
+              "value": "STOP",
+              "date": "2026-11-06",
+              "record": "DOC-1001"
+            },
+            {
+              "label": "Pharmacy",
+              "value": "Filled 30 tabs (auto-refill)",
+              "date": "2026-11-07",
+              "record": "RX-1002"
+            },
+            {
+              "label": "PCP EHR list",
+              "value": "Active, 20 mg daily",
+              "date": "2026-08-12",
+              "record": "EHR-1001"
+            }
+          ],
+          "suggested": "Both true: prescribed = stopped, but filled. Create safety task.",
+          "options": [
+            "Accept discharge",
+            "Accept pharmacy",
+            "Both true (create gap task)",
+            "Needs follow-up"
+          ],
+          "demo_choice": "Both true (create gap task)",
+          "result": "Safety task created: confirm member is NOT taking lisinopril; ask pharmacy to cancel auto-refill."
+        },
+        {
+          "id": "CF-1B",
+          "entity": "Home phone 614-555-0101",
+          "severity": "data",
+          "explanation": "Number on file since 2019 was disconnected on both weekend attempts.",
+          "values": [
+            {
+              "label": "Enrollment file",
+              "value": "Home - member",
+              "date": "2019-06-03",
+              "record": "C-1001"
+            },
+            {
+              "label": "Outreach log",
+              "value": "Disconnected x2",
+              "date": "2026-11-07",
+              "record": "OA-1005"
+            }
+          ],
+          "suggested": "Mark number invalid; send correction ticket to enrollment.",
+          "options": [
+            "Mark invalid",
+            "Keep",
+            "Needs follow-up"
+          ],
+          "demo_choice": "Mark invalid",
+          "result": "Number demoted to Low confidence; correction ticket DQ-0001 sent to enrollment."
+        }
+      ],
+      "med_diff": [
+        {
+          "drug": "Sacubitril/valsartan 24/26 mg BID",
+          "discharge": "NEW",
+          "pharmacy": "Rejected - PA required (6 Nov)",
+          "ehr": "Not listed",
+          "category": "New, not filled",
+          "severity": "high",
+          "records": [
+            "DOC-1001",
+            "RX-1003",
+            "PA-1001"
+          ]
+        },
+        {
+          "drug": "Lisinopril 20 mg daily",
+          "discharge": "STOP",
+          "pharmacy": "Filled 7 Nov (auto-refill)",
+          "ehr": "Active",
+          "category": "Stopped, still filling",
+          "severity": "safety",
+          "records": [
+            "DOC-1001",
+            "RX-1002",
+            "EHR-1001"
+          ]
+        },
+        {
+          "drug": "Furosemide 40 mg",
+          "discharge": "CHANGE to BID",
+          "pharmacy": "30 tabs / 30 days (daily)",
+          "ehr": "40 mg daily",
+          "category": "Dose changed, old dose filled",
+          "severity": "medium",
+          "records": [
+            "DOC-1001",
+            "RX-1004",
+            "EHR-1002"
+          ]
+        },
+        {
+          "drug": "Metoprolol succinate 50 mg",
+          "discharge": "CONTINUE",
+          "pharmacy": "Filled 20 Oct",
+          "ehr": "Active",
+          "category": "Continued and filled",
+          "severity": "ok",
+          "records": [
+            "RX-1005"
+          ]
+        },
+        {
+          "drug": "Metformin 500 mg BID",
+          "discharge": "CONTINUE",
+          "pharmacy": "Filled 15 Oct (90 days)",
+          "ehr": "Active",
+          "category": "Continued and filled",
+          "severity": "ok",
+          "records": [
+            "RX-1006"
+          ]
+        },
+        {
+          "drug": "Atorvastatin 40 mg",
+          "discharge": "CONTINUE",
+          "pharmacy": "Filled 15 Oct (90 days)",
+          "ehr": "Not listed",
+          "category": "Continued and filled",
+          "severity": "ok",
+          "records": [
+            "RX-1007"
+          ]
+        }
+      ],
+      "nbas": [
+        {
+          "id": "NBA-1",
+          "rank": 1,
+          "title": "Safety call today: hold lisinopril, confirm meds on hand",
+          "why": "Stopped ACE inhibitor refilled while Entresto is pending (CF-1A)",
+          "rule": "Stopped med still being filled",
+          "confirm": "Maria"
+        },
+        {
+          "id": "NBA-2",
+          "rank": 2,
+          "title": "Call pharmacy: cancel lisinopril auto-refill; update furosemide to BID",
+          "why": "RX-1002 auto-refill; RX-1004 old dose",
+          "rule": "Stopped med still being filled",
+          "confirm": "Maria + pharmacist"
+        },
+        {
+          "id": "NBA-3",
+          "rank": 3,
+          "title": "Start Entresto prior auth with Dr. Okonjo's office (614-555-0192)",
+          "why": "Claim rejected 6 Nov, no PA submitted",
+          "rule": "Discharge med not filled within 3 days",
+          "confirm": "Maria"
+        },
+        {
+          "id": "NBA-4",
+          "rank": 4,
+          "title": "Book PCP visit with Dr. Velasco before Fri 13 Nov",
+          "why": "Day 3 of 7, no visit booked; verified number 614-555-0142 (plan file had 0119)",
+          "rule": "Day >= 3 after discharge, no PCP visit",
+          "confirm": "Maria"
+        },
+        {
+          "id": "NBA-5",
+          "rank": 5,
+          "title": "Re-screen transport during the call",
+          "why": "SDOH screen 9 months old; transport 'sometimes'",
+          "rule": "SDOH > 6 months + new event",
+          "confirm": "Maria"
+        }
+      ],
+      "contacts": [
+        {
+          "contact_id": "C-1002",
+          "label": "Karen Brennan (daughter) - mobile",
+          "value": "614-555-0133",
+          "confidence": "High",
+          "why": "Connected 3/3; HIPAA auth valid to May 2027; verified 20 Oct",
+          "best_window": "12:00-13:00 (override: call now - safety)"
+        },
+        {
+          "contact_id": "C-1001",
+          "label": "Home landline",
+          "value": "614-555-0101",
+          "confidence": "Low",
+          "why": "Disconnected 7 Nov x2; last verified 2019",
+          "best_window": "-"
+        }
+      ],
+      "call": {
+        "contact_id": "C-1002",
+        "outcome": "Connected",
+        "duration_min": 16,
+        "language": "English",
+        "transcript": [
+          [
+            "Maria",
+            "Hi Karen, it's Maria from Brightwater Health. I'm calling about your dad's discharge on Friday."
+          ],
+          [
+            "Karen",
+            "Oh good. Dad's home, but the pharmacy said his new heart pill needed some approval."
+          ],
+          [
+            "Maria",
+            "Yes, I see that. Has he taken any lisinopril since he got home? The hospital stopped it."
+          ],
+          [
+            "Karen",
+            "Mom picked up a refill Saturday because it came automatically... I think he took one yesterday morning."
+          ],
+          [
+            "Maria",
+            "Please put the lisinopril aside and don't give any more. I'll call the pharmacy and his cardiologist about the new medicine today."
+          ],
+          [
+            "Karen",
+            "Okay. He's also a bit puffier in the ankles, and the scale says 86."
+          ],
+          [
+            "Maria",
+            "That's up almost 2 kilos. Is he short of breath at rest or needing more pillows?"
+          ],
+          [
+            "Karen",
+            "Not at rest. Maybe one extra pillow."
+          ],
+          [
+            "Maria",
+            "The discharge plan is furosemide twice a day. Does he have enough tablets for that?"
+          ],
+          [
+            "Karen",
+            "He's been taking one in the morning. We only have the old bottle."
+          ],
+          [
+            "Maria",
+            "I'll fix that with the pharmacy. Can you get him to Dr. Velasco on Wednesday? I can book it now."
+          ],
+          [
+            "Karen",
+            "Wednesday afternoon works, but I'll need to drive him. Mom doesn't drive anymore."
+          ]
+        ],
+        "note_draft": {
+          "S": "Daughter Karen reports member home since 6 Nov. Took 1 dose lisinopril 8 Nov from auto-refill. Ankle swelling, weight 86.0 kg (+1.8 kg), +1 pillow orthopnea, no rest dyspnea. Taking furosemide once daily (old supply). Entresto not started - PA rejection at pharmacy.",
+          "O": "Weight 84.2 -> 86.0 kg since discharge (RPM). K 5.1, Cr 1.6 on 6 Nov. Discharge plan: Entresto 24/26 BID new, lisinopril stop, furosemide 40 BID.",
+          "A": "High readmission risk: missed GDMT start, inadvertent ACEi dose, under-dosed diuretic, early fluid gain.",
+          "P": "1) Hold lisinopril - caregiver instructed. 2) Pharmacy: cancel auto-refill, furosemide 40 BID dispense. 3) Cardiology office: submit Entresto PA, confirm 36 h washout from 8 Nov dose. 4) PCP visit booked Wed 11 Nov 14:30 (Dr. Velasco, verified 614-555-0142). 5) Red-flag education: call if +1 kg/day or SOB at rest. 6) Transport: daughter drives; re-screen documented."
+        }
+      },
+      "care_plan_suggestions": [
+        {
+          "kind": "Goal",
+          "text": "Start sacubitril/valsartan by Fri 13 Nov after PA approval and 36 h ACEi washout"
+        },
+        {
+          "kind": "Barrier",
+          "text": "Prior authorization not submitted at discharge"
+        },
+        {
+          "kind": "Intervention",
+          "text": "Daily weight review via scale feed for 14 days; call if +1 kg/day"
+        }
+      ],
+      "documentation": {
+        "template": "Transitions of Care assessment (40 fields)",
+        "fields": [
+          {
+            "section": "Admission",
+            "field": "Admit date",
+            "value": "3 Nov 2026",
+            "status": "prefilled",
+            "source": "ADT-1001"
+          },
+          {
+            "section": "Admission",
+            "field": "Discharge date",
+            "value": "6 Nov 2026 14:10",
+            "status": "prefilled",
+            "source": "ADT-1002"
+          },
+          {
+            "section": "Admission",
+            "field": "Facility",
+            "value": "St. Brigid Medical Center",
+            "status": "prefilled",
+            "source": "ADT-1002"
+          },
+          {
+            "section": "Admission",
+            "field": "Primary diagnosis",
+            "value": "I50.23 Acute on chronic systolic HF",
+            "status": "prefilled",
+            "source": "DOC-1001"
+          },
+          {
+            "section": "Admission",
+            "field": "Length of stay",
+            "value": "3 days",
+            "status": "prefilled",
+            "source": "computed"
+          },
+          {
+            "section": "Admission",
+            "field": "Discharge disposition",
+            "value": "Home, self-care",
+            "status": "prefilled",
+            "source": "ADT-1002"
+          },
+          {
+            "section": "Medications",
+            "field": "Discharge med list reviewed",
+            "value": "6 medications",
+            "status": "prefilled",
+            "source": "DOC-1001"
+          },
+          {
+            "section": "Medications",
+            "field": "New medications",
+            "value": "Sacubitril/valsartan 24/26 mg BID",
+            "status": "prefilled",
+            "source": "DOC-1001"
+          },
+          {
+            "section": "Medications",
+            "field": "Stopped medications",
+            "value": "Lisinopril 20 mg",
+            "status": "prefilled",
+            "source": "DOC-1001"
+          },
+          {
+            "section": "Medications",
+            "field": "Dose changes",
+            "value": "Furosemide 40 mg daily -> BID",
+            "status": "prefilled",
+            "source": "DOC-1001"
+          },
+          {
+            "section": "Medications",
+            "field": "Pharmacy fill status",
+            "value": "Entresto rejected (PA); lisinopril refilled 7 Nov",
+            "status": "prefilled",
+            "source": "RX-1002, RX-1003"
+          },
+          {
+            "section": "Medications",
+            "field": "Discrepancies identified",
+            "value": "3 (new not filled; stopped still filling; old diuretic dose)",
+            "status": "prefilled",
+            "source": "Clarity med diff"
+          },
+          {
+            "section": "Medications",
+            "field": "Member/caregiver understands changes",
+            "value": "Yes after teach-back with daughter",
+            "status": "call",
+            "source": "Call 9 Nov"
+          },
+          {
+            "section": "Medications",
+            "field": "Meds on hand match plan",
+            "value": "No - 1 lisinopril dose taken 8 Nov; held now",
+            "status": "call",
+            "source": "Call 9 Nov"
+          },
+          {
+            "section": "Follow-up",
+            "field": "PCP visit within 7 days",
+            "value": "Booked Wed 11 Nov 14:30, Dr. Velasco",
+            "status": "call",
+            "source": "Call 9 Nov + D11"
+          },
+          {
+            "section": "Follow-up",
+            "field": "Specialist follow-up",
+            "value": "Cardiology 20 Nov 10:30",
+            "status": "prefilled",
+            "source": "AP-1001"
+          },
+          {
+            "section": "Follow-up",
+            "field": "Labs ordered",
+            "value": "BMP within 1 week",
+            "status": "prefilled",
+            "source": "DOC-1001"
+          },
+          {
+            "section": "Follow-up",
+            "field": "Home health needed",
+            "value": "",
+            "status": "maria",
+            "source": ""
+          },
+          {
+            "section": "Follow-up",
+            "field": "DME needs",
+            "value": "None reported",
+            "status": "call",
+            "source": "Call 9 Nov"
+          },
+          {
+            "section": "Follow-up",
+            "field": "Transport to appointments",
+            "value": "Daughter drives; spouse does not",
+            "status": "call",
+            "source": "Call 9 Nov"
+          },
+          {
+            "section": "Self-management",
+            "field": "Daily weights being done",
+            "value": "Yes - Bluetooth scale",
+            "status": "call",
+            "source": "Call 9 Nov"
+          },
+          {
+            "section": "Self-management",
+            "field": "Current weight",
+            "value": "86.0 kg (8 Nov), +1.8 kg since discharge",
+            "status": "prefilled",
+            "source": "RPM-1003"
+          },
+          {
+            "section": "Self-management",
+            "field": "Shortness of breath / edema",
+            "value": "Ankle edema; +1 pillow; no rest dyspnea",
+            "status": "call",
+            "source": "Call 9 Nov"
+          },
+          {
+            "section": "Self-management",
+            "field": "Red-flag symptoms education",
+            "value": "",
+            "status": "maria",
+            "source": ""
+          },
+          {
+            "section": "Self-management",
+            "field": "Sodium / fluid restriction understood",
+            "value": "Yes, 2 g sodium",
+            "status": "call",
+            "source": "Call 9 Nov"
+          },
+          {
+            "section": "Self-management",
+            "field": "Glucose monitoring",
+            "value": "Checks fasting 3x/week",
+            "status": "call",
+            "source": "Call 9 Nov"
+          },
+          {
+            "section": "Self-management",
+            "field": "Allergies",
+            "value": "NKDA",
+            "status": "prefilled",
+            "source": "DOC-1001"
+          },
+          {
+            "section": "Self-management",
+            "field": "Fall risk",
+            "value": "",
+            "status": "maria",
+            "source": ""
+          },
+          {
+            "section": "Support",
+            "field": "Primary caregiver",
+            "value": "Karen Brennan (daughter)",
+            "status": "prefilled",
+            "source": "CG-1001"
+          },
+          {
+            "section": "Support",
+            "field": "HIPAA authorization",
+            "value": "Valid to 31 May 2027",
+            "status": "prefilled",
+            "source": "CG-1001"
+          },
+          {
+            "section": "Support",
+            "field": "Living situation",
+            "value": "Lives with spouse Joan (80)",
+            "status": "prefilled",
+            "source": "CG-1002, D01"
+          },
+          {
+            "section": "Support",
+            "field": "Transport (SDOH)",
+            "value": "'Sometimes a problem' (Feb 2026 - aging)",
+            "status": "prefilled",
+            "source": "SD-1001"
+          },
+          {
+            "section": "Support",
+            "field": "Food security (SDOH)",
+            "value": "No concerns (Feb 2026)",
+            "status": "prefilled",
+            "source": "SD-1001"
+          },
+          {
+            "section": "Support",
+            "field": "Preferred language",
+            "value": "English",
+            "status": "prefilled",
+            "source": "D01"
+          },
+          {
+            "section": "Risk & admin",
+            "field": "Readmission risk",
+            "value": "92nd percentile",
+            "status": "prefilled",
+            "source": "D13"
+          },
+          {
+            "section": "Risk & admin",
+            "field": "Program",
+            "value": "TOC + DM-HF",
+            "status": "prefilled",
+            "source": "CASE-1001"
+          },
+          {
+            "section": "Risk & admin",
+            "field": "Open quality gaps",
+            "value": "TRC patient engagement; TRC med rec",
+            "status": "prefilled",
+            "source": "QG-1001, QG-1002"
+          },
+          {
+            "section": "Risk & admin",
+            "field": "PCP",
+            "value": "Dr. Anita Velasco (verified)",
+            "status": "prefilled",
+            "source": "D11"
+          },
+          {
+            "section": "Risk & admin",
+            "field": "Advance directive",
+            "value": "On file (2024)",
+            "status": "prefilled",
+            "source": "CASE-1001"
+          },
+          {
+            "section": "Risk & admin",
+            "field": "Consent to continue case management",
+            "value": "",
+            "status": "maria",
+            "source": ""
+          }
+        ],
+        "maria_answers": {
+          "Home health needed": "Not now - reassess at PCP visit",
+          "Red-flag symptoms education": "Done - call if +1 kg/day, +2 kg/week, SOB at rest",
+          "Fall risk": "Low - ambulates independently",
+          "Consent to continue case management": "Yes (daughter on behalf, member agreed)"
+        }
+      },
+      "wrap_up": {
+        "written_once_to": [
+          "TOC assessment",
+          "Care plan (1 goal, 1 barrier, 1 intervention)",
+          "Call note (SOAP)",
+          "Audit log (40 field provenance)"
+        ],
+        "deadlines_ticked": [
+          "TOC contact within 2 business days",
+          "TRC - patient engagement after discharge",
+          "TRC - med reconciliation started"
+        ],
+        "tasks_created": [
+          "Pharmacy: cancel lisinopril auto-refill, dispense furosemide BID (Maria, today)",
+          "Cardiology: Entresto PA + washout timing (Maria, today)",
+          "Daily weight watch 14 days (Clarity auto-alert)"
+        ],
+        "booked": "PCP visit Wed 11 Nov 14:30 - Dr. Velasco - via verified number 614-555-0142",
+        "data_corrections": [
+          "DQ-0001: Home phone 614-555-0101 disconnected -> enrollment",
+          "DQ-0002: Plan provider file phone for NPI 9900000142 (0119 -> 0142) -> provider data team"
+        ],
+        "queue_change": "Harold 82.2 Urgent -> 38.2 This week. Marcus Reid moves to #1.",
+        "time_saved_min": 18,
+        "conversations_today_after": 1
+      }
+    },
+    "BW-10003": {
+      "member_id": "BW-10003",
+      "headline": "4th ED visit in 90 days on Saturday. Case closes Thursday as 'unreachable' - but he isn't.",
+      "brief": [
+        {
+          "text": "ED visit at Eastside General Sat 7 Nov 22:40 - 03:10; no diagnosis or ED note yet. Albuterol refilled Sun 8 Nov, so likely asthma.",
+          "cites": [
+            "ADT-3003",
+            "ADT-3004",
+            "RX-3004"
+          ]
+        },
+        {
+          "text": "4 ED visits in 90 days (22 Aug, 30 Sep, 19 Oct, 7 Nov), all late evening and respiratory; only 2 are in claims so far.",
+          "cites": [
+            "CL-3002",
+            "CL-3003",
+            "ADT-3001",
+            "ADT-3003"
+          ]
+        },
+        {
+          "text": "Controller inhaler (fluticasone/salmeterol) last filled 11 Jul (~120 days); rescue inhaler filled 4 times since August.",
+          "cites": [
+            "RX-3005",
+            "RX-3001",
+            "RX-3004"
+          ]
+        },
+        {
+          "text": "Case is in 'unable to reach' and auto-closes Thu 12 Nov. All 5 attempts were 10:00-11:30 to numbers that are wrong or dead.",
+          "cites": [
+            "CASE-3001",
+            "OA-3002",
+            "OA-3006"
+          ]
+        },
+        {
+          "text": "Member services captured a new mobile, 614-555-0187, when he called on 2 Oct at 19:12. It never reached the case file.",
+          "cites": [
+            "MS-3001"
+          ]
+        },
+        {
+          "text": "PCP practice on the plan file closed in Aug; Dr. Holloway is now at Northgate - 5th St (verified).",
+          "cites": [
+            "D11:9900000170"
+          ]
+        }
+      ],
+      "conflicts": [
+        {
+          "id": "CF-3A",
+          "entity": "Who owns 614-555-0150",
+          "severity": "data",
+          "explanation": "Labelled as Marcus's home line, but 3 calls reached a man who says Marcus moved out.",
+          "values": [
+            {
+              "label": "Enrollment file",
+              "value": "Home - member",
+              "date": "2023-02-11",
+              "record": "C-3001"
+            },
+            {
+              "label": "Outreach log",
+              "value": "'Wrong person' x3",
+              "date": "2026-11-05",
+              "record": "OA-3006"
+            }
+          ],
+          "suggested": "Re-label owner as 'former roommate'; stop calling.",
+          "options": [
+            "Re-label",
+            "Keep",
+            "Needs follow-up"
+          ],
+          "demo_choice": "Re-label",
+          "result": "Number removed from Marcus's outreach list; correction ticket DQ-0003."
+        },
+        {
+          "id": "CF-3B",
+          "entity": "Diagnosis: COPD vs asthma",
+          "severity": "clinical",
+          "explanation": "Older claims and the PCP list say COPD; the latest ED claim and ED note say asthma exacerbation.",
+          "values": [
+            {
+              "label": "PCP EHR",
+              "value": "J44.9 COPD",
+              "date": "2026-04-02",
+              "record": "EHR-3002"
+            },
+            {
+              "label": "ED claim",
+              "value": "J44.1 COPD exacerbation",
+              "date": "2026-08-22",
+              "record": "CL-3002"
+            },
+            {
+              "label": "ED claim + note",
+              "value": "J45.901 asthma exacerbation",
+              "date": "2026-10-19",
+              "record": "DOC-3001"
+            }
+          ],
+          "suggested": "Needs follow-up: ask PCP to confirm asthma-COPD overlap at next visit.",
+          "options": [
+            "Accept COPD",
+            "Accept asthma",
+            "Both true",
+            "Needs follow-up"
+          ],
+          "demo_choice": "Needs follow-up",
+          "result": "Question added to PCP visit agenda."
+        }
+      ],
+      "med_diff": [
+        {
+          "drug": "Fluticasone/salmeterol 250/50 (controller)",
+          "discharge": "Resume (ED note 20 Oct)",
+          "pharmacy": "Last filled 11 Jul",
+          "ehr": "Active",
+          "category": "Prescribed, not filled",
+          "severity": "high",
+          "records": [
+            "DOC-3001",
+            "RX-3005",
+            "EHR-3001"
+          ]
+        },
+        {
+          "drug": "Albuterol HFA (rescue)",
+          "discharge": "-",
+          "pharmacy": "4 fills since 23 Aug",
+          "ehr": "Not listed",
+          "category": "Filled but not on any list",
+          "severity": "medium",
+          "records": [
+            "RX-3001",
+            "RX-3004"
+          ]
+        },
+        {
+          "drug": "Metformin 500 mg BID",
+          "discharge": "-",
+          "pharmacy": "Filled 14 Oct",
+          "ehr": "Not listed",
+          "category": "Filled but not on any list",
+          "severity": "low",
+          "records": [
+            "RX-3006"
+          ]
+        }
+      ],
+      "nbas": [
+        {
+          "id": "NBA-1",
+          "rank": 1,
+          "title": "Cancel the Thursday auto-closure",
+          "why": "Member reachable via MS-3001 number",
+          "rule": "Case closing while a new contact exists",
+          "confirm": "Maria"
+        },
+        {
+          "id": "NBA-2",
+          "rank": 2,
+          "title": "Text, then call 614-555-0187 after 18:00",
+          "why": "Member's only successful contacts were evenings; ED visits all evening",
+          "rule": "Contact ranking",
+          "confirm": "Maria"
+        },
+        {
+          "id": "NBA-3",
+          "rank": 3,
+          "title": "Ask Denise to pass a message (no PHI)",
+          "why": "Sister reachable; no HIPAA authorization",
+          "rule": "Caregiver without authorization",
+          "confirm": "Maria"
+        },
+        {
+          "id": "NBA-4",
+          "rank": 4,
+          "title": "Refill controller inhaler + add spacer; 90-day supply",
+          "why": "~120-day controller gap",
+          "rule": "Prescribed, not filled",
+          "confirm": "Maria"
+        },
+        {
+          "id": "NBA-5",
+          "rank": 5,
+          "title": "Book Dr. Holloway at Northgate - 5th St (614-555-0171)",
+          "why": "Old location closed; 7 months since PCP visit",
+          "rule": "Verified provider contact",
+          "confirm": "Maria"
+        },
+        {
+          "id": "NBA-6",
+          "rank": 6,
+          "title": "ED-diversion plan + community health worker referral (transport)",
+          "why": "4 ED visits in 90 days; no transport (SDOH 17 mo old)",
+          "rule": "ED visits >= 3 in 90 days",
+          "confirm": "Maria"
+        }
+      ],
+      "contacts": [
+        {
+          "contact_id": "MS-3001",
+          "label": "Marcus - new mobile (from member services, 2 Oct)",
+          "value": "614-555-0187",
+          "confidence": "Medium",
+          "why": "Member called from it himself; never tried by case management",
+          "best_window": "After 18:00"
+        },
+        {
+          "contact_id": "C-3004",
+          "label": "Denise Reid (sister) - mobile",
+          "value": "614-555-0164",
+          "confidence": "Medium",
+          "why": "Given as next-of-kin at ED on 7 Nov; NO HIPAA auth - message only",
+          "best_window": "Any"
+        },
+        {
+          "contact_id": "C-3002",
+          "label": "Marcus - old mobile",
+          "value": "614-555-0158",
+          "confidence": "Low",
+          "why": "Disconnected 22 Oct, 30 Oct",
+          "best_window": "-"
+        },
+        {
+          "contact_id": "C-3001",
+          "label": "Home line (former roommate)",
+          "value": "614-555-0150",
+          "confidence": "Low",
+          "why": "'Wrong person' x3",
+          "best_window": "-"
+        }
+      ],
+      "call": {
+        "contact_id": "MS-3001",
+        "outcome": "SMS reply, then connected at 18:20 (simulated)",
+        "duration_min": 11,
+        "language": "English",
+        "transcript": [
+          [
+            "Clarity SMS",
+            "Hi Marcus, this is Maria, your nurse at Brightwater Health. Is now a good time for a 5-min call? Reply YES or a better time."
+          ],
+          [
+            "Marcus (SMS)",
+            "after 6"
+          ],
+          [
+            "Maria",
+            "Thanks for picking up, Marcus. I saw you were in the ER Saturday night. How's your breathing?"
+          ],
+          [
+            "Marcus",
+            "Better. I ran out of the purple inhaler a while ago, just been using the rescue one."
+          ],
+          [
+            "Maria",
+            "Let's get the purple one refilled today, and a spacer. Is the pharmacy on Livingston still easiest?"
+          ],
+          [
+            "Marcus",
+            "Yeah. Getting to the doctor is the hard part - no car, and my old doctor's office closed."
+          ]
+        ],
+        "note_draft": {
+          "S": "Member reports controller inhaler ran out ~July; using albuterol only. ED 7 Nov for SOB. No transport; old PCP office closed.",
+          "O": "4 ED visits/90 days; controller last filled 11 Jul; albuterol x4 since Aug.",
+          "A": "Uncontrolled asthma/COPD overlap driven by controller gap and access barriers.",
+          "P": "Controller + spacer refill (90-day); PCP visit with Dr. Holloway, 5th St; CHW referral for transport; ED-diversion plan; case closure cancelled; contact list updated."
+        }
+      },
+      "wrap_up": {
+        "queue_change": "Marcus 78.3 Urgent -> 36.8 This week",
+        "data_corrections": [
+          "DQ-0003: 614-555-0150 not member's number",
+          "DQ-0004: add 614-555-0187 from member services"
+        ]
+      }
+    },
+    "BW-10005": {
+      "member_id": "BW-10005",
+      "headline": "Reassessment due Thursday. 29 of 40 fields are pre-filled - and 2 safety catches first.",
+      "brief": [
+        {
+          "text": "Annual CCM reassessment (40 fields) due Thu 12 Nov; 29 fields pre-filled from data, 8 come from the call, 3 need Maria.",
+          "cites": [
+            "CASE-5001"
+          ]
+        },
+        {
+          "text": "Fell at home 24 Oct; ED at Mercy West, knee contusion, no fracture. Not yet in claims.",
+          "cites": [
+            "ADT-5001",
+            "DOC-5001",
+            "CL-5001"
+          ]
+        },
+        {
+          "text": "eGFR 24 on 20 Oct (CKD stage 4) but metformin auto-refilled 28 Oct; PCP list still says CKD 3b.",
+          "cites": [
+            "LAB-5001",
+            "RX-5001",
+            "EHR-5002"
+          ]
+        },
+        {
+          "text": "Hospital bed prior auth pending 9 days, unassigned in UM. Lucia called member services about it on 5 Nov.",
+          "cites": [
+            "PA-5001",
+            "MS-5001"
+          ]
+        },
+        {
+          "text": "Lucia's HIPAA authorization expired 30 Sep; caregiver strain high (Zarit-4 = 12).",
+          "cites": [
+            "CG-5001"
+          ]
+        },
+        {
+          "text": "Every connected call has been in Spanish at 19:00-20:00, though eligibility says English.",
+          "cites": [
+            "OA-5001",
+            "OA-5002",
+            "D01"
+          ]
+        }
+      ],
+      "conflicts": [
+        {
+          "id": "CF-5A",
+          "entity": "Preferred language",
+          "severity": "data",
+          "explanation": "Eligibility says English with no interpreter; both connected calls this year were in Spanish via interpreter.",
+          "values": [
+            {
+              "label": "Eligibility",
+              "value": "English, no interpreter",
+              "date": "2021-01-01",
+              "record": "BW-10005"
+            },
+            {
+              "label": "Outreach log",
+              "value": "Spanish (interpreter) x2",
+              "date": "2026-10-15",
+              "record": "OA-5002"
+            }
+          ],
+          "suggested": "Accept outreach log: Spanish + interpreter.",
+          "options": [
+            "Accept eligibility",
+            "Accept outreach log",
+            "Needs follow-up"
+          ],
+          "demo_choice": "Accept outreach log",
+          "result": "Language set to Spanish for all outreach; correction ticket DQ-0005."
+        },
+        {
+          "id": "CF-5B",
+          "entity": "Diabetes / CKD diagnosis",
+          "severity": "clinical",
+          "explanation": "Claims say diabetes without complications; the PCP list says CKD 3b; the latest eGFR of 24 is stage 4.",
+          "values": [
+            {
+              "label": "Claim",
+              "value": "E11.9",
+              "date": "2026-09-02",
+              "record": "CL-5001"
+            },
+            {
+              "label": "PCP EHR",
+              "value": "E11.22 + N18.32 (CKD 3b)",
+              "date": "2026-03-18",
+              "record": "EHR-5002"
+            },
+            {
+              "label": "Lab",
+              "value": "eGFR 24 -> stage 4",
+              "date": "2026-10-20",
+              "record": "LAB-5001"
+            }
+          ],
+          "suggested": "Use E11.22 + CKD stage 4 (most recent, lab-backed) for this assessment; ask PCP to update.",
+          "options": [
+            "Accept claim",
+            "Accept EHR",
+            "Accept lab-backed value",
+            "Needs follow-up"
+          ],
+          "demo_choice": "Accept lab-backed value",
+          "result": "Assessment uses CKD stage 4; PCP notified."
+        },
+        {
+          "id": "CF-5C",
+          "entity": "Metformin with eGFR 24",
+          "severity": "safety",
+          "explanation": "Metformin is contraindicated below eGFR 30, yet it was auto-refilled 28 Oct.",
+          "values": [
+            {
+              "label": "Pharmacy",
+              "value": "Metformin 500 mg BID filled",
+              "date": "2026-10-28",
+              "record": "RX-5001"
+            },
+            {
+              "label": "Lab",
+              "value": "eGFR 24",
+              "date": "2026-10-20",
+              "record": "LAB-5001"
+            }
+          ],
+          "suggested": "Flag to PCP for review today (Maria does not change meds).",
+          "options": [
+            "Flag to PCP",
+            "Dismiss",
+            "Needs follow-up"
+          ],
+          "demo_choice": "Flag to PCP",
+          "result": "Secure message sent to Dr. Ortega; PDC-DR gap marked 'clinical review'."
+        }
+      ],
+      "med_diff": [
+        {
+          "drug": "Metformin 500 mg BID",
+          "discharge": "-",
+          "pharmacy": "Filled 28 Oct (auto)",
+          "ehr": "Active",
+          "category": "Safety: lab contraindication",
+          "severity": "safety",
+          "records": [
+            "RX-5001",
+            "LAB-5001"
+          ]
+        },
+        {
+          "drug": "Donepezil 10 mg",
+          "discharge": "-",
+          "pharmacy": "Filled 28 Oct",
+          "ehr": "-",
+          "category": "Continued and filled",
+          "severity": "ok",
+          "records": [
+            "RX-5002"
+          ]
+        },
+        {
+          "drug": "Amlodipine 5 mg",
+          "discharge": "-",
+          "pharmacy": "Filled 28 Oct",
+          "ehr": "-",
+          "category": "Continued and filled",
+          "severity": "ok",
+          "records": [
+            "RX-5003"
+          ]
+        }
+      ],
+      "nbas": [
+        {
+          "id": "NBA-1",
+          "rank": 1,
+          "title": "Renew Lucia's HIPAA authorization before discussing PHI",
+          "why": "Expired 30 Sep",
+          "rule": "Expired caregiver authorization",
+          "confirm": "Maria"
+        },
+        {
+          "id": "NBA-2",
+          "rank": 2,
+          "title": "Flag metformin to Dr. Ortega (eGFR 24)",
+          "why": "Auto-refill 28 Oct",
+          "rule": "Med-lab safety conflict",
+          "confirm": "Maria"
+        },
+        {
+          "id": "NBA-3",
+          "rank": 3,
+          "title": "Escalate hospital bed PA to UM nurse",
+          "why": "Pending 9 days, unassigned",
+          "rule": "Prior auth pending > 5 days",
+          "confirm": "Maria"
+        },
+        {
+          "id": "NBA-4",
+          "rank": 4,
+          "title": "Call Lucia in Spanish, 19:00-20:00, and complete reassessment",
+          "why": "Due Thu; 29/40 fields pre-filled",
+          "rule": "Reassessment due",
+          "confirm": "Maria"
+        },
+        {
+          "id": "NBA-5",
+          "rank": 5,
+          "title": "Offer respite: adult day program + caregiver support group",
+          "why": "Zarit-4 = 12",
+          "rule": "Caregiver strain indicator",
+          "confirm": "Maria"
+        }
+      ],
+      "contacts": [
+        {
+          "contact_id": "C-5002",
+          "label": "Lucia Ruiz (daughter) - mobile, Spanish",
+          "value": "614-555-0191",
+          "confidence": "High",
+          "why": "Connected 2/2 at 19:00-20:00 in Spanish",
+          "best_window": "19:00-20:00"
+        },
+        {
+          "contact_id": "C-5001",
+          "label": "Home landline",
+          "value": "614-555-0190",
+          "confidence": "Medium",
+          "why": "Daytime call in English unanswered 2 Nov",
+          "best_window": "-"
+        }
+      ],
+      "call": {
+        "contact_id": "C-5002",
+        "outcome": "Connected (Spanish interpreter)",
+        "duration_min": 22,
+        "language": "Spanish",
+        "transcript": [
+          [
+            "Maria (via interpreter)",
+            "Buenas noches, Lucia. Before we talk about your mother's care, I need to renew your permission to discuss her health. Is that okay?"
+          ],
+          [
+            "Lucia",
+            "Si, claro."
+          ],
+          [
+            "Maria",
+            "Thank you. How has she been since the fall?"
+          ],
+          [
+            "Lucia",
+            "Her knee hurts, about a 4. She gets up twice at night and I worry she'll fall again. We're still waiting for the bed."
+          ],
+          [
+            "Maria",
+            "I've escalated the bed request today. Would an adult day program two days a week help you?"
+          ],
+          [
+            "Lucia",
+            "Yes. I work two jobs. I'm home after 6:30."
+          ]
+        ],
+        "note_draft": {
+          "S": "Daughter reports knee pain 4/10, night waking x2, eating less in evenings. No hypoglycemia. Requests respite.",
+          "O": "eGFR 24; A1c 7.0; fall 24 Oct; hospital bed PA pending 9 days.",
+          "A": "High fall risk; caregiver strain high; metformin safety concern.",
+          "P": "HIPAA auth renewed verbally, form sent; PCP flagged re metformin; UM escalation for bed; adult day program referral; reassessment completed."
+        }
+      },
+      "documentation": {
+        "template": "Annual CCM reassessment (40 fields)",
+        "fields": [
+          {
+            "section": "Demographics",
+            "field": "Preferred language",
+            "value": "Spanish (interpreter)",
+            "status": "prefilled",
+            "source": "OA-5002 (resolved CF-5A)"
+          },
+          {
+            "section": "Demographics",
+            "field": "Lives with",
+            "value": "Daughter Lucia",
+            "status": "prefilled",
+            "source": "CG-5001"
+          },
+          {
+            "section": "Demographics",
+            "field": "Primary caregiver",
+            "value": "Lucia Ruiz (daughter)",
+            "status": "prefilled",
+            "source": "CG-5001"
+          },
+          {
+            "section": "Demographics",
+            "field": "Caregiver HIPAA authorization",
+            "value": "Renewed verbally 9 Nov; form sent",
+            "status": "call",
+            "source": "Call 9 Nov"
+          },
+          {
+            "section": "Demographics",
+            "field": "PCP",
+            "value": "Dr. Maribel Ortega (Spanish-speaking, verified)",
+            "status": "prefilled",
+            "source": "D11"
+          },
+          {
+            "section": "Demographics",
+            "field": "Advance directive",
+            "value": "DNR/POLST on file (2022)",
+            "status": "prefilled",
+            "source": "CASE-5001"
+          },
+          {
+            "section": "Clinical",
+            "field": "Active diagnoses",
+            "value": "Alzheimer's (late onset); T2D with CKD stage 4; OA knee",
+            "status": "prefilled",
+            "source": "CF-5B resolution, LAB-5001"
+          },
+          {
+            "section": "Clinical",
+            "field": "ED visits / admissions (12 mo)",
+            "value": "1 ED visit - fall, 24 Oct",
+            "status": "prefilled",
+            "source": "ADT-5001, DOC-5001"
+          },
+          {
+            "section": "Clinical",
+            "field": "Falls in last 6 months",
+            "value": "1 (24 Oct, knee contusion)",
+            "status": "prefilled",
+            "source": "DOC-5001"
+          },
+          {
+            "section": "Clinical",
+            "field": "Current medications",
+            "value": "Metformin 500 BID; donepezil 10; amlodipine 5",
+            "status": "prefilled",
+            "source": "RX-5001..5003"
+          },
+          {
+            "section": "Clinical",
+            "field": "Medication safety concerns",
+            "value": "Metformin with eGFR 24 - flagged to PCP",
+            "status": "prefilled",
+            "source": "Clarity safety flag"
+          },
+          {
+            "section": "Clinical",
+            "field": "Recent labs",
+            "value": "eGFR 24 (20 Oct); A1c 7.0%",
+            "status": "prefilled",
+            "source": "LAB-5001, LAB-5002"
+          },
+          {
+            "section": "Clinical",
+            "field": "Hypoglycemia episodes",
+            "value": "None reported",
+            "status": "call",
+            "source": "Call 9 Nov"
+          },
+          {
+            "section": "Clinical",
+            "field": "Pain (0-10)",
+            "value": "4 - right knee",
+            "status": "call",
+            "source": "Call 9 Nov"
+          },
+          {
+            "section": "Clinical",
+            "field": "Cognitive status change",
+            "value": "",
+            "status": "maria",
+            "source": ""
+          },
+          {
+            "section": "Function",
+            "field": "Hospital bed request",
+            "value": "Pending 9 days - escalated",
+            "status": "prefilled",
+            "source": "PA-5001"
+          },
+          {
+            "section": "Function",
+            "field": "Home PT",
+            "value": "Approved 28 Oct",
+            "status": "prefilled",
+            "source": "PA-5002"
+          },
+          {
+            "section": "Function",
+            "field": "ADL support needed",
+            "value": "Bathing, dressing (daughter)",
+            "status": "call",
+            "source": "Call 9 Nov"
+          },
+          {
+            "section": "Function",
+            "field": "Mobility aid",
+            "value": "Walker",
+            "status": "prefilled",
+            "source": "DOC-5001"
+          },
+          {
+            "section": "Function",
+            "field": "Nutrition / appetite",
+            "value": "Eating less in evenings",
+            "status": "call",
+            "source": "Call 9 Nov"
+          },
+          {
+            "section": "Function",
+            "field": "Sleep / night wandering",
+            "value": "Up 2x most nights",
+            "status": "call",
+            "source": "Call 9 Nov"
+          },
+          {
+            "section": "SDOH",
+            "field": "Housing",
+            "value": "Stable - lives with daughter",
+            "status": "prefilled",
+            "source": "SD-5001"
+          },
+          {
+            "section": "SDOH",
+            "field": "Food security",
+            "value": "No concerns",
+            "status": "prefilled",
+            "source": "SD-5001"
+          },
+          {
+            "section": "SDOH",
+            "field": "Transport",
+            "value": "Depends on daughter",
+            "status": "prefilled",
+            "source": "SD-5001"
+          },
+          {
+            "section": "SDOH",
+            "field": "Utilities",
+            "value": "No concerns",
+            "status": "prefilled",
+            "source": "SD-5001"
+          },
+          {
+            "section": "SDOH",
+            "field": "Home safety",
+            "value": "Fall risk - grab bars requested",
+            "status": "prefilled",
+            "source": "SD-5001"
+          },
+          {
+            "section": "SDOH",
+            "field": "Social isolation",
+            "value": "Moderate",
+            "status": "prefilled",
+            "source": "SD-5001"
+          },
+          {
+            "section": "Caregiver",
+            "field": "Caregiver burden (Zarit-4)",
+            "value": "12 (15 Oct) - high",
+            "status": "prefilled",
+            "source": "CG-5001"
+          },
+          {
+            "section": "Caregiver",
+            "field": "Caregiver work schedule",
+            "value": "Two jobs; home after 18:30",
+            "status": "call",
+            "source": "Call 9 Nov"
+          },
+          {
+            "section": "Caregiver",
+            "field": "Respite interest",
+            "value": "Yes - adult day program 2 days/week",
+            "status": "call",
+            "source": "Call 9 Nov"
+          },
+          {
+            "section": "Caregiver",
+            "field": "Caregiver support plan",
+            "value": "",
+            "status": "maria",
+            "source": ""
+          },
+          {
+            "section": "Goals",
+            "field": "Goal 1 - no falls with injury",
+            "value": "Not met (fall 24 Oct)",
+            "status": "prefilled",
+            "source": "CASE-5001, DOC-5001"
+          },
+          {
+            "section": "Goals",
+            "field": "Goal 2 - A1c 7-8%, no hypoglycemia",
+            "value": "Met (7.0%)",
+            "status": "prefilled",
+            "source": "CASE-5001, LAB-5002"
+          },
+          {
+            "section": "Goals",
+            "field": "Goal 3 - caregiver supported",
+            "value": "Partially met",
+            "status": "prefilled",
+            "source": "CASE-5001, CG-5001"
+          },
+          {
+            "section": "Goals",
+            "field": "New / revised goals",
+            "value": "",
+            "status": "maria",
+            "source": ""
+          },
+          {
+            "section": "Goals",
+            "field": "Program",
+            "value": "CCM",
+            "status": "prefilled",
+            "source": "CASE-5001"
+          },
+          {
+            "section": "Goals",
+            "field": "Risk level",
+            "value": "80th percentile (cost)",
+            "status": "prefilled",
+            "source": "D13"
+          },
+          {
+            "section": "Goals",
+            "field": "Open quality gaps",
+            "value": "PDC-DR - review (metformin may stop)",
+            "status": "prefilled",
+            "source": "QG-5001"
+          },
+          {
+            "section": "Goals",
+            "field": "Last reassessment",
+            "value": "12 Nov 2025",
+            "status": "prefilled",
+            "source": "CASE-5001"
+          },
+          {
+            "section": "Goals",
+            "field": "Next reassessment due",
+            "value": "12 Nov 2027 (auto-set on submit)",
+            "status": "prefilled",
+            "source": "computed"
+          }
+        ],
+        "maria_answers": {
+          "Cognitive status change": "Mild decline - more night waking; PCP to review",
+          "Caregiver support plan": "Adult day program 2 days/wk; Spanish caregiver support group",
+          "New / revised goals": "Safe transfers with hospital bed by 30 Nov"
+        }
+      },
+      "wrap_up": {
+        "queue_change": "Esperanza 71.5 Urgent -> 34.0 This week",
+        "data_corrections": [
+          "DQ-0005: language English -> Spanish + interpreter",
+          "DQ-0006: diagnosis update request to PCP"
+        ]
+      }
+    },
+    "BW-10002": {
+      "member_id": "BW-10002",
+      "headline": "No hospital event - but metformin PDC 68% and lisinopril 60%, and A1c jumped to 9.1%.",
+      "brief": [
+        {
+          "text": "Metformin ran out ~26 Oct (last 90-day fill 28 Jul); year-to-date PDC 68%. Lisinopril PDC 60%. Both are triple-weighted Star measures.",
+          "cites": [
+            "RX-2004",
+            "RX-2006",
+            "QG-2001",
+            "QG-2002"
+          ]
+        },
+        {
+          "text": "A1c rose from 7.4% (Mar) to 9.1% (21 Oct, outside lab); fasting glucose 195 mg/dL (reported as 10.8 mmol/L).",
+          "cites": [
+            "LAB-2001",
+            "LAB-2002",
+            "LAB-2003"
+          ]
+        },
+        {
+          "text": "Glipizide 5 mg filled 1 Sep from an urgent care - not on Dr. Liu's list.",
+          "cites": [
+            "RX-2007",
+            "EHR-2001"
+          ]
+        },
+        {
+          "text": "Claims look normal (last PCP visit 3 Apr) and the risk model reads 'utilization stable'.",
+          "cites": [
+            "CL-2002",
+            "D13"
+          ]
+        },
+        {
+          "text": "On 29 Sep he mentioned stomach upset on metformin and 'every other day' dosing. Reached 08:00-09:00 before his driving shift.",
+          "cites": [
+            "OA-2002",
+            "CASE-2001"
+          ]
+        }
+      ],
+      "conflicts": [
+        {
+          "id": "CF-2A",
+          "entity": "Glipizide",
+          "severity": "clinical",
+          "explanation": "A second diabetes drug from an urgent care is not on the PCP's list - hypoglycemia risk if metformin restarts.",
+          "values": [
+            {
+              "label": "Pharmacy",
+              "value": "Glipizide 5 mg filled",
+              "date": "2026-09-01",
+              "record": "RX-2007"
+            },
+            {
+              "label": "PCP EHR",
+              "value": "Not listed",
+              "date": "2026-04-03",
+              "record": "EHR-2001"
+            }
+          ],
+          "suggested": "Both true: ask member; notify PCP.",
+          "options": [
+            "Both true (create gap task)",
+            "Needs follow-up"
+          ],
+          "demo_choice": "Both true (create gap task)",
+          "result": "Task: confirm with member; notify Dr. Liu."
+        },
+        {
+          "id": "CF-2B",
+          "entity": "Fasting glucose unit",
+          "severity": "data",
+          "explanation": "Outside lab reports mmol/L; shown normalized.",
+          "values": [
+            {
+              "label": "Outside lab",
+              "value": "10.8 mmol/L",
+              "date": "2026-10-21",
+              "record": "LAB-2003"
+            },
+            {
+              "label": "Normalized",
+              "value": "195 mg/dL",
+              "date": "2026-10-21",
+              "record": "LAB-2003"
+            }
+          ],
+          "suggested": "Display 195 mg/dL; keep original.",
+          "options": [
+            "OK"
+          ],
+          "demo_choice": "OK",
+          "result": "Normalized."
+        }
+      ],
+      "nbas": [
+        {
+          "id": "NBA-1",
+          "rank": 1,
+          "title": "Call 08:00-09:00: ask why refills stopped (side effects? cost?)",
+          "why": "PDC 68% / 60%",
+          "rule": "Adherence PDC < 80% on 3x Star class",
+          "confirm": "Maria"
+        },
+        {
+          "id": "NBA-2",
+          "rank": 2,
+          "title": "Ask about urgent-care glipizide; notify Dr. Liu",
+          "why": "Med on no list",
+          "rule": "Filled but not on any list",
+          "confirm": "Maria"
+        },
+        {
+          "id": "NBA-3",
+          "rank": 3,
+          "title": "Suggest extended-release metformin + 100-day supplies; check Extra Help eligibility",
+          "why": "GI side effects + retirement income",
+          "rule": "Adherence outreach",
+          "confirm": "Maria"
+        },
+        {
+          "id": "NBA-4",
+          "rank": 4,
+          "title": "Re-screen food security",
+          "why": "SDOH 10 months old; 'sometimes worried'",
+          "rule": "SDOH > 6 months",
+          "confirm": "Maria"
+        }
+      ],
+      "contacts": [
+        {
+          "contact_id": "C-2001",
+          "label": "Devon - mobile",
+          "value": "614-555-0111",
+          "confidence": "High",
+          "why": "Verified 29 Sep; connects 08:00-09:00",
+          "best_window": "08:00-09:00"
+        }
+      ],
+      "claims_only_view": {
+        "score": 37.3,
+        "note": "Without pharmacy and lab signals (S = 0), Devon would score 37.3 and sit in 'This week' with nothing to explain why."
+      }
+    },
+    "BW-10004": {
+      "member_id": "BW-10004",
+      "headline": "Psych discharge Thursday to a shelter. Follow-up and medication bridge both run out this Thursday.",
+      "brief": [
+        {
+          "text": "Discharged from Riverside Behavioral Health Thu 5 Nov 11:00 to Harbor Light Shelter, 220 Pier St.",
+          "cites": [
+            "ADT-4002"
+          ]
+        },
+        {
+          "text": "Bipolar I, current episode manic with psychotic features; new aripiprazole 10 mg with a 7-day bridge ending Thu 12 Nov.",
+          "cites": [
+            "DOC-4001",
+            "RX-4001"
+          ]
+        },
+        {
+          "text": "7-day follow-up after mental-health hospitalization (FUH) due Thu 12 Nov; none booked.",
+          "cites": [
+            "QG-4001"
+          ]
+        },
+        {
+          "text": "Eligibility address and 'housing stable' screen are 14 months old.",
+          "cites": [
+            "D01",
+            "SD-4001"
+          ]
+        },
+        {
+          "text": "Two TOC calls on 6 Nov went unanswered; she replies to texts and asked not to be called.",
+          "cites": [
+            "OA-4003",
+            "OA-4002",
+            "CASE-4001"
+          ]
+        },
+        {
+          "text": "Amlodipine last filled 6 Aug.",
+          "cites": [
+            "RX-4002"
+          ]
+        }
+      ],
+      "conflicts": [
+        {
+          "id": "CF-4A",
+          "entity": "Address",
+          "severity": "data",
+          "explanation": "Eligibility shows Linden Ave; the discharge ADT says she went to a shelter.",
+          "values": [
+            {
+              "label": "Eligibility",
+              "value": "14 Linden Ave, Apt 3",
+              "date": "2025-09-15",
+              "record": "BW-10004"
+            },
+            {
+              "label": "ADT discharge",
+              "value": "Harbor Light Shelter, 220 Pier St",
+              "date": "2026-11-05",
+              "record": "ADT-4002"
+            }
+          ],
+          "suggested": "Accept ADT (most recent); confirm by text.",
+          "options": [
+            "Accept eligibility",
+            "Accept ADT",
+            "Needs follow-up"
+          ],
+          "demo_choice": "Accept ADT",
+          "result": "Address updated for care coordination; correction ticket DQ-0007."
+        },
+        {
+          "id": "CF-4B",
+          "entity": "Discharge date",
+          "severity": "data",
+          "explanation": "An amended summary says 6 Nov; the original summary and ADT say 5 Nov. Deadlines use the ADT event time.",
+          "values": [
+            {
+              "label": "Discharge summary",
+              "value": "5 Nov",
+              "date": "2026-11-05",
+              "record": "DOC-4001"
+            },
+            {
+              "label": "Amended summary",
+              "value": "6 Nov",
+              "date": "2026-11-06",
+              "record": "DOC-4002"
+            },
+            {
+              "label": "ADT",
+              "value": "5 Nov 11:00",
+              "date": "2026-11-05",
+              "record": "ADT-4002"
+            }
+          ],
+          "suggested": "Use 5 Nov (ADT); merge duplicate documents.",
+          "options": [
+            "Use 5 Nov",
+            "Use 6 Nov"
+          ],
+          "demo_choice": "Use 5 Nov",
+          "result": "FUH deadline stays Thu 12 Nov."
+        }
+      ],
+      "nbas": [
+        {
+          "id": "NBA-1",
+          "rank": 1,
+          "title": "Text first (template ready), then call shelter case worker desk",
+          "why": "Prefers text; 2 calls unanswered",
+          "rule": "Contact ranking",
+          "confirm": "Maria"
+        },
+        {
+          "id": "NBA-2",
+          "rank": 2,
+          "title": "Book tele-psychiatry with Dr. Okafor by Thu 12 Nov",
+          "why": "FUH 7-day due; telehealth available",
+          "rule": "Follow-up window closing",
+          "confirm": "Maria"
+        },
+        {
+          "id": "NBA-3",
+          "rank": 3,
+          "title": "Arrange 30-day aripiprazole + amlodipine at a pharmacy near the shelter",
+          "why": "Bridge ends 12 Nov; BP med gap",
+          "rule": "Bridge supply ending",
+          "confirm": "Maria"
+        },
+        {
+          "id": "NBA-4",
+          "rank": 4,
+          "title": "Housing navigator referral + SDOH re-screen",
+          "why": "Shelter; SDOH 14 months old",
+          "rule": "SDOH > 12 months + new event",
+          "confirm": "Maria + SW Jamal Price"
+        }
+      ],
+      "contacts": [
+        {
+          "contact_id": "C-4001",
+          "label": "Leah - prepaid mobile (SMS preferred)",
+          "value": "614-555-0122",
+          "confidence": "High",
+          "why": "Replies to SMS (2/2); calls unanswered (0/2)",
+          "best_window": "SMS any time; evenings"
+        },
+        {
+          "contact_id": "C-4002",
+          "label": "Harbor Light Shelter - case worker desk",
+          "value": "614-555-0125",
+          "confidence": "Medium",
+          "why": "From discharge social work note",
+          "best_window": "09:00-17:00"
+        }
+      ],
+      "sms_template": "Hi Leah, it's Maria from Brightwater Health. Checking in after Thursday. Can I help set up your follow-up visit and a refill near Pier St? Reply here anytime.",
+      "sms_reply": "hi. yes pls. bridge meds run out thurs and i dont have a dr appt. can do video"
+    }
+  },
+  "demo_paths": {
+    "full": [
+      "BW-10001"
+    ],
+    "contact": [
+      "BW-10003"
+    ],
+    "documentation": [
+      "BW-10005"
+    ],
+    "view_only": [
+      "BW-10002",
+      "BW-10004"
+    ]
+  },
+  "ai_label": "Drafted by Clarity - review required",
+  "animation_ms": {
+    "brief": 1200,
+    "conflict": 800,
+    "note": 1500,
+    "care_plan": 1000
+  }
+}

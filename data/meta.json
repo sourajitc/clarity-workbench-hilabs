@@ -1,0 +1,259 @@
+{
+  "clock": "2026-11-09T08:00:00",
+  "clock_label": "Mon 9 Nov 2026, 08:00 ET",
+  "plan": "Brightwater Health (fictional) - Medicare Advantage HMO + D-SNP",
+  "user": {
+    "name": "Maria Alvarez, RN, CCM",
+    "role": "Complex case manager (telephonic)",
+    "caseload": 48
+  },
+  "weights": {
+    "R": 0.35,
+    "D": 0.3,
+    "S": 0.25,
+    "E": 0.1
+  },
+  "bands": [
+    {
+      "name": "Urgent",
+      "min": 70
+    },
+    {
+      "name": "Today",
+      "min": 50
+    },
+    {
+      "name": "This week",
+      "min": 30
+    },
+    {
+      "name": "Monitor",
+      "min": 0
+    }
+  ],
+  "deadline_points": [
+    [
+      "Overdue or due today",
+      100
+    ],
+    [
+      "<= 1 business day",
+      80
+    ],
+    [
+      "<= 3 days",
+      50
+    ],
+    [
+      "<= 7 days",
+      20
+    ],
+    [
+      "Later",
+      0
+    ]
+  ],
+  "signal_points": [
+    [
+      "Admission or ED visit",
+      90
+    ],
+    [
+      "Critical lab",
+      85
+    ],
+    [
+      "Discharge",
+      80
+    ],
+    [
+      "Discharge med not filled",
+      75
+    ],
+    [
+      "Adherence PDC < 80%",
+      60
+    ],
+    [
+      "SDOH change",
+      50
+    ],
+    [
+      "Number confirmed wrong",
+      40
+    ]
+  ],
+  "engagement_points": [
+    [
+      "> 30 days",
+      100
+    ],
+    [
+      "15-30 days",
+      60
+    ],
+    [
+      "8-14 days",
+      30
+    ],
+    [
+      "<= 7 days",
+      0
+    ]
+  ],
+  "freshness": [
+    {
+      "source": "ADT alerts",
+      "fresh": "< 24 h",
+      "aging": "1-3 days",
+      "stale": "> 3 days",
+      "fresh_days": 1,
+      "stale_days": 3
+    },
+    {
+      "source": "Pharmacy fills",
+      "fresh": "< 3 days",
+      "aging": "3-14 days",
+      "stale": "> 14 days",
+      "fresh_days": 3,
+      "stale_days": 14
+    },
+    {
+      "source": "HIE / discharge summary",
+      "fresh": "< 48 h after discharge",
+      "aging": "2-7 days",
+      "stale": "missing > 7 days",
+      "fresh_days": 2,
+      "stale_days": 7
+    },
+    {
+      "source": "Labs",
+      "fresh": "< 7 days",
+      "aging": "7-30 days",
+      "stale": "> 30 days",
+      "fresh_days": 7,
+      "stale_days": 30
+    },
+    {
+      "source": "Medical claims",
+      "fresh": "< 30 days",
+      "aging": "30-60 days",
+      "stale": "> 60 days",
+      "fresh_days": 30,
+      "stale_days": 60
+    },
+    {
+      "source": "SDOH / HRA screen",
+      "fresh": "< 6 months",
+      "aging": "6-12 months",
+      "stale": "> 12 months",
+      "fresh_days": 183,
+      "stale_days": 365
+    },
+    {
+      "source": "Phone number",
+      "fresh": "verified < 90 days",
+      "aging": "90-365 days",
+      "stale": "failed or > 1 year",
+      "fresh_days": 90,
+      "stale_days": 365
+    }
+  ],
+  "feed_health": [
+    {
+      "source": "ADT (HIE)",
+      "last_refresh": "2026-11-09 07:52",
+      "status": "fresh"
+    },
+    {
+      "source": "Pharmacy (PBM)",
+      "last_refresh": "2026-11-09 06:00",
+      "status": "fresh"
+    },
+    {
+      "source": "HIE documents",
+      "last_refresh": "2026-11-09 07:30",
+      "status": "fresh"
+    },
+    {
+      "source": "Labs",
+      "last_refresh": "2026-11-09 07:10",
+      "status": "fresh"
+    },
+    {
+      "source": "Scheduling (partial coverage)",
+      "last_refresh": "2026-11-09 06:30",
+      "status": "aging"
+    },
+    {
+      "source": "Provider directory (HiLabs)",
+      "last_refresh": "2026-11-09 05:00",
+      "status": "fresh"
+    },
+    {
+      "source": "Medical claims",
+      "last_refresh": "2026-11-01 02:00",
+      "status": "aging"
+    }
+  ],
+  "pdc": {
+    "devon_metformin": {
+      "pct": 68.0,
+      "covered": 210,
+      "days": 309
+    },
+    "devon_lisinopril": {
+      "pct": 60.0,
+      "covered": 180,
+      "days": 302
+    }
+  },
+  "after_action": {
+    "BW-10001": {
+      "R": 92,
+      "D": 20,
+      "S": 0,
+      "E": 0,
+      "reasons": [
+        "PCP visit booked Wed 11 Nov",
+        "BMP lab due within 7 days",
+        "Pharmacy PA in progress"
+      ],
+      "next_deadline": "BMP lab by Fri 13 Nov",
+      "score": 38.2,
+      "band": "This week"
+    },
+    "BW-10003": {
+      "R": 88,
+      "D": 20,
+      "S": 0,
+      "E": 0,
+      "reasons": [
+        "Contact restored - new mobile verified",
+        "Auto-closure cancelled",
+        "Controller inhaler refill in progress"
+      ],
+      "next_deadline": "PCP visit (Dr. Holloway) within 7 days",
+      "score": 36.8,
+      "band": "This week"
+    },
+    "BW-10005": {
+      "R": 80,
+      "D": 20,
+      "S": 0,
+      "E": 0,
+      "reasons": [
+        "Reassessment completed 9 Nov",
+        "Metformin flagged to PCP",
+        "Hospital bed PA escalated"
+      ],
+      "next_deadline": "Bed PA decision follow-up Fri 13 Nov",
+      "score": 34.0,
+      "band": "This week"
+    }
+  },
+  "counts": {
+    "new_since_friday": 6,
+    "due_today": 7
+  }
+}
